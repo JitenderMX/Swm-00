@@ -1,0 +1,1929 @@
+/* ------------------------------ 
+    ************** Table Of Content  ************** 
+                 --------------------
+                 
+01. =Google Font
+02. =Base
+03. =Section padding margin
+04. =Heading
+05. =Main Button
+06. =Header
+07. =Footer
+08. =BreadCrum
+
+
+
+
+Font Size System 
+-----------------
+10px / 12px / 16px / 18px / 20px / 24px / 30px / 36px / 44px / 52px / 62px / 74px / 86px / 98px 
+
+Spacing System 
+-----------------
+2px / 4px / 8px / 12px / 16px / 24px / 32px / 48px / 64px / 80px / 96px / 128px  
+
+-------------------------------------------------------*/
+
+
+/* 01. Google Font Start ------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ------------- Google Font End ------------- */
+
+
+/* 02.Base Start ------------------------------ */
+
+:root {
+    --th-color-1: #BB0013;
+    --th-color-2: #FFB800;
+    --th-color-3: #1C1C1C;
+    --th-color-4: #FFF8E8;
+    --th-font-1: 'Compacta';
+    --th-font-2: 'Kumbh Sans', sans-serif;
+}
+
+/* html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #222;
+    font-size: 1.6rem;
+} */
+body {
+    overflow-x: hidden;
+    padding: 0px;
+    cursor: url(../image/paella.png), auto;
+}
+
+/* * {
+    user-select: none;
+} */
+
+.color-red {
+    color: var(--th-color-1);
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: #000;
+    font-family: var(--th-font-1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 1.12px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 8px;
+    /* text-align: center;*/
+}
+
+.h1 .text-red,
+.h2 .text-red,
+.h3 .text-red,
+.h4 .text-red,
+.h5 .text-red,
+.h6 .text-red {
+    background-color: var(--th-color-1);
+    color: #FFF;
+    font-family: var(--th-font-1);
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.h1 span,
+.h2 span,
+.h3 span,
+.h4 span,
+.h5 span,
+.h6 span {
+    display: block !important;
+}
+
+.h1 {
+    font-size: 120px;
+}
+
+.h1 .text-aut {
+    padding-top: 22px;
+}
+
+.h1 .text-red {
+    font-size: 84px;
+    padding: 8px;
+    padding-bottom: 0;
+}
+
+.h2 {
+    font-size: 100px;
+}
+
+.h2 .text-aut {
+    padding-top: 12px;
+}
+
+.h2 .text-red {
+    font-size: 60px;
+    padding: 8px;
+    padding-bottom: 0;
+}
+
+.h3 {
+    font-size: 44px;
+}
+
+.h3 .text-aut {
+    padding-top: 8px;
+}
+
+.h3 .text-red {
+    padding: 4px;
+    font-size: 26px;
+}
+
+.h4 {
+    font-size: 26px;
+}
+
+.h4 .text-aut {
+    padding-top: 4px;
+}
+
+.h4 .text-red {
+    padding: 4px;
+    font-size: 20px;
+}
+
+.th-btn {
+    background-color: var(--th-color-1);
+    color: #FFF;
+    font-family: var(--th-font-1);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.12px;
+    padding: 10px 40px;
+    cursor: pointer;
+    /* display: inline-block !important; */
+}
+
+section {
+    position: relative;
+    padding: 50px 0;
+}
+
+.bg-text {
+    color: #FDD469;
+    font-family: var(--th-font-1);
+    font-size: 600px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 14.819px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    color: #000;
+    font-family: var(--th-font-2);
+    font-weight: 400;
+    line-height: 150%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Scroll Bar style start */
+
+/* ::-webkit-scrollbar {
+    width
+    width: 10px;
+}
+
+::-webkit-scrollbar:hover {
+    width: 50px;
+}
+
+ ::-webkit-scrollbar-track {
+    Track
+    background-color: ;
+}
+
+ ::-webkit-scrollbar-thumb {
+    Handle
+    background-color: ;
+} */
+
+
+/* Scroll Bar style End */
+
+
+/* ------------- base End ------------- */
+
+
+
+/* 04. Header Section Start ------------------------------ */
+#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.nav .nav-logo {
+    max-width: 70px;
+}
+
+.nav .nav-menu {
+    max-width: 50px;
+    cursor: pointer;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--th-color-2);
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.nav-container ul {
+    list-style: none;
+}
+
+.nav-container.active {
+    visibility: visible;
+    opacity: 100;
+}
+
+/* .nav-container .nav{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+} */
+.menu {
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.menu-item {
+    font-family: var(--th-font-1);
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100% !important;
+    letter-spacing: 2.208px;
+    text-align: center;
+    /* padding: 15px 0; */
+    transition: all .5s;
+}
+
+.menu-item a {
+    color: #000;
+    list-style: 100% !important;
+    transition: all .5s;
+}
+
+
+
+.menu-item:hover a {
+    color: var(--th-color-1);
+}
+
+.menu-container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-item.active a {
+    color: var(--th-color-1);
+}
+
+.menu-container.home-page #nav-icon {
+    transform: translate(0px, -15px)
+}
+
+.menu-container.about-page #nav-icon {
+    transform: translate(-11px, 83px)
+}
+
+.menu-container.service-page #nav-icon {
+    transform: translate(-50px, 185px)
+}
+
+.menu-container.course-page #nav-icon {
+    transform: translate(-45px, 283px)
+}
+
+.menu-container.resource-page #nav-icon {
+    transform: translate(-70px, 382px)
+}
+
+.menu-container.contact-page #nav-icon {
+    transform: translate(-40px, 482px)
+}
+
+#nav-icon {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 50px;
+    transform: translate(0px, 0px);
+    transition: all .5s;
+}
+
+#btn-menu,
+#btn-close {
+    cursor: pointer !important;
+    max-width: 80px !important;
+    padding: 10px;
+}
+
+#btn-menu img,
+#btn-close img {
+    cursor: pointer !important;
+}
+
+/* ------------- Header Section End ------------- */
+
+/* 05. About Banner Section Start ------------------------------ */
+#about-hero {
+    height: 800px;
+    background-image: url(../image/about-hero.png);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.container-xxl {
+    max-width: 1440px !important;
+    /* overflow-x: hidden; */
+}
+
+#about-hero .container-xxl,
+#about-hero .row {
+    height: 100% !important;
+}
+
+#about-hero p {
+    font-size: 18px;
+    color: var(--th-color-3);
+    line-height: 120%;
+}
+
+.hero-text {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    transform: translate(-50px, -50px);
+}
+
+/* ------------- About Banner Section End ------------- */
+
+/* 06. About Our-Presence Section Start ------------------------------ */
+.our-presence .presence-text {
+    position: relative;
+    /* transform: translate(0%, -40%); */
+}
+
+/* ------------- About Our-Presence Section End ------------- */
+/* 07. About We-Are Section Start ------------------------------ */
+.we-are {
+    background-color: var(--th-color-4);
+}
+
+.we-are img.iso {
+    width: 100%;
+    max-width: 180px;
+}
+
+.we-are-head {
+    display: flex;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+.we-are-head .certifide {
+    width: 100%;
+    max-width: 200px;
+}
+
+.we-are-pera {
+    padding: 70px 30px;
+    background-color: var(--th-color-2);
+    border-radius: 30px;
+    max-width: 700px;
+    margin-top: 40px;
+}
+
+.we-are-lady {
+    max-width: 300px;
+}
+
+/* ------------- About We-Are Section End ------------- */
+
+
+
+/* 08. Dowload Section Start ------------------------------ */
+.download {
+    padding: 0;
+}
+
+.download-left,
+.download-right {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.download-left {
+    background-color: var(--th-color-3);
+}
+
+/* ------------- Dowload Section End ------------- */
+
+
+
+/* 08. About Us In Media Section Start ------------------------------ */
+.us-media {
+    padding: 100px 0;
+    background-image: url(../image/us-media.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.us-media .h2 {
+    color: var(--th-color-2);
+}
+
+.media-box {
+    background: var(--th-color-4);
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+}
+
+.media-h {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+.media-body {
+    margin-bottom: 30px;
+}
+
+.read-more.th-btn {
+    font-size: 24px;
+    padding: 5px 10px;
+    display: inline-block;
+    font-family: var(--th-font-2);
+}
+
+.media-h p {
+    margin-bottom: 0px;
+}
+
+.read-our-blogs {
+    overflow-x: hidden;
+}
+
+/* ------------- About Us In Media Section End ------------- */
+
+/* 09. About Our Team Section Start ------------------------------ */
+.about-our-team {
+    padding: 100px 0;
+    background-color: var(--th-color-4);
+}
+
+.about-our-team .team-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 0 0;
+}
+
+.about-our-team .team-box img {
+    width: 100%;
+    max-width: 270px;
+}
+
+.about-our-team .team-box h4 {
+    color: #000;
+    font-family: var(--th-font-2);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 110%;
+    margin: 10px 0 15px 0;
+}
+
+.about-our-team .team-box ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.about-our-team .team-box li {
+    color: #000;
+    text-align: center;
+    font-family: var(--th-font-2);
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    line-height: 110%;
+}
+
+/* ------------- About Our Team Section End ------------- */
+
+/* 10. About Gallery Section Start ------------------------------ */
+
+.gallery-photo {
+    padding: 100px 0;
+    background-image: url(../image/photo-gallery.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery-photo .h2 {
+    color: #fff;
+}
+
+.gallery-photo .text-red {
+    background-color: var(--th-color-3);
+}
+
+.gallery-box {
+    margin-top: 40px;
+    animation: slideAnimation 50s linear infinite alternate;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 360px;
+    min-width: 360px;
+}
+
+.gallery-container {
+    overflow: hidden;
+}
+
+@keyframes slideAnimation {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(-9800px);
+    }
+}
+
+/* ------------- About Gallery Section End ------------- */
+
+/* 11.Footer Section Start ------------------------------ */
+footer {
+    position: relative;
+    z-index: 1000;
+}
+
+.footer {
+    background-color: var(--th-color-2);
+    /* background-image: url(../image/footer-bg.svg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    padding: 50px 30px 50px 30px;
+    text-align: center;
+}
+
+.mediax {
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer p {
+    color: #000;
+    text-align: center;
+    font-family: var(--th-font-2);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.64px;
+}
+
+.footer img {
+    max-width: 140px;
+    width: 100%;
+}
+
+.footer a {
+    color: #000;
+    font-family: var(--th-font-2);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.64px;
+    transition: all .5s;
+}
+
+.footer a:hover {
+    color: var(--th-color-1);
+    font-weight: 400;
+}
+
+footer .bg-black,
+footer .bg-black a {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--th-font-2);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    transition: all .5s;
+}
+
+footer .bg-black a:hover {
+    color: var(--th-color-1);
+    font-weight: 400;
+}
+
+/* ------------- Footer Section End ------------- */
+
+
+/* 12.Hero Section Start ------------------------------ */
+
+#home-hero {
+    /* background-color: #000; */
+    background-image: radial-gradient(circle, #393d43, #373e41, #383f3f, #3b3f3d, #3e3f3c);
+    padding: 300px 0 250px 0;
+}
+
+#home-hero {
+    background-image: url(../image/hero-home.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+#home-hero .h1 {
+    color: #FFFDF5;
+    z-index: 1;
+}
+
+#home-hero p {
+    color: #FFFDF5;
+    font-family: var(--th-font-2);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 0.48px;
+    margin-bottom: 100px;
+}
+
+#home-hero img#flag {
+    max-width: 150px;
+    position: absolute;
+    top: 24%;
+    right: 24%;
+    transform: rotate(20deg) !important;
+    z-index: -1;
+}
+
+#home-hero img#ball {
+    width: 100%;
+    max-width: 150px;
+    position: absolute;
+    bottom: 70px;
+    left: 30px;
+}
+
+/* ------------- Hero Section End ------------- */
+
+/* 13.Our Course Section Start ------------------------------ */
+
+.our-course {
+    background-color: var(--th-color-2);
+    padding: 200px 0 0 0;
+    background-image: url(../image/our-course.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.course-container {
+    width: 100%;
+    margin: auto;
+    max-width: 1500px;
+    display: flex;
+    /* gap: 15px; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.course-box {
+    flex: 20%;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    transition: all .5s;
+}
+
+.course-box:hover {
+    transform: rotate(0deg) !important;
+    z-index: 5 !important;
+}
+
+.co-box {
+    padding: 20px 20px 200px 20px;
+}
+
+.course-box h3 {
+    font-size: 80px;
+    justify-content: center;
+    text-align: center;
+}
+
+.course-box p {
+    color: #212121;
+    line-height: 152.523%;
+    /* 27.454px */
+}
+
+.course-box-1 {
+    background-color: #9EDB9A;
+    position: relative;
+    z-index: 1;
+    transform: rotate(13.03deg);
+}
+
+.course-box-1 h3 {
+    color: #C4F9C1;
+}
+
+.course-box-2 {
+    background-color: #F56E7C;
+    position: relative;
+    z-index: 2;
+    transform: rotate(-7.53deg);
+}
+
+.course-box-2 h3 {
+    color: #F8A3AC;
+}
+
+.course-box-3 {
+    background-color: #FFD66C;
+    position: relative;
+    z-index: 3;
+    transform: rotate(13.93deg);
+}
+
+.course-box-3 h3 {
+    color: #DDB858;
+}
+
+.course-box-4 {
+    background-color: #9EC7D9;
+    position: relative;
+    z-index: 4;
+    transform: rotate(-15.18deg);
+}
+
+.course-box-4 h3 {
+    color: #AEE0F6;
+}
+
+.course-box-5 {
+    background-color: #F56E7C;
+    position: relative;
+    z-index: 5;
+    transform: rotate(15deg);
+}
+
+.course-box-5 h3 {
+    color: #F8A3AC;
+}
+
+.know-box {
+    width: 100%;
+    border-radius: 20px;
+    background: #FFFDF5;
+    box-shadow: 0px 4px 31px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    position: relative;
+    transform: translateY(-150px);
+    z-index: 10;
+}
+
+.know-left {
+    width: 100%;
+    max-width: 24%;
+}
+
+.know-left p {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 152.523%;
+    /* 27.454px */
+    letter-spacing: 0.36px;
+    margin-bottom: 60px;
+}
+
+.know-mid {
+    width: 1px !important;
+    height: 100% !important;
+    min-height: 180px;
+    background-color: var(--th-color-3);
+}
+
+.know-right {
+    width: 100%;
+    max-width: 74%;
+    padding-left: 40px;
+}
+
+.know-right p {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 152.523%;
+    /* 36.605px */
+    letter-spacing: 0.48px;
+}
+
+/* ------------- Our Course Section End ------------- */
+
+
+/* 13.Why Choose Us Section Start ------------------------------ */
+.why-choose {
+    position: relative;
+    padding: 100px 0px;
+    background-color: var(--th-color-3);
+}
+
+.why-choose .bull-path {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+}
+
+.why-choose .bull-img {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    max-width: 350px;
+}
+
+.why-choose .matador-img {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    z-index: 1;
+    width: auto;
+    max-height: 400px;
+}
+.why-choose .h2 .text-aut {
+   color: white;
+}
+.why-choose p {
+   color: white;
+   font-size: 22px;
+   text-align: center;
+}
+.swiper-btn .fas{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    background-color: var(--th-color-1);
+    text-align: center;
+    border-radius: 10px;
+    color: var(--th-color-4);
+    cursor: pointer;
+    transition: all .5s;
+}
+.swiper-btn .fas.grey{
+    background-color: #A19F9E;
+}
+.why-choose .col-md-3 {
+    position: relative;
+}
+
+.why-choose .container-xxl .row .col-md-3::before {
+    content: " ";
+    width: 1px;
+    height: 200px;
+    background-color: var(--th-color-3);
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+}
+
+.why-choose .container-xxl .row .col-md-3:last-child::before {
+    width: 0;
+}
+
+.why-choose .container-xxl .row .col-md-3:last-child img {
+    width: 100%;
+    max-width: 120px;
+}
+
+.why-choose .container-xxl .row .col-md-3:nth-child(2) img {
+    width: 100%;
+    max-width: 120px;
+}
+
+
+.choose-box {
+    max-width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.choose-box h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.choose-box img {
+    width: 100%;
+}
+
+/* ------------- Why Choose Us Section End ------------- */
+
+/* 14.Career Section Start ------------------------------ */
+.career {
+    padding-bottom: 0 !important;
+    background-color: var(--th-color-4);
+}
+
+.career .h2 {
+    /* color: #fff; */
+}
+
+.career img {
+    width: 100%;
+    max-width: 410px;
+}
+
+.career .career-box img {
+    width: 100%;
+    max-width: 110px;
+    margin: auto;
+}
+
+.career p {
+    /* color: #fff; */
+    margin: 30px 0;
+}
+
+/* ------------- Career Section End ------------- */
+
+/* 15.Meet Our Team Section Start ------------------------------ */
+.our-team {
+    padding: 200px 0 100px 0;
+    background: url(../image/our-team.png);
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.our-team .h2 {
+    color: var(--th-color-2);
+}
+
+.our-team p {
+    color: #fff;
+    margin: 30px 0;
+}
+
+/* ------------- Meet Our Team Section End ------------- */
+
+/* 16.Testimonal Section Start ------------------------------ */
+.testimonal {
+    padding: 100px 0;
+    background-color: var(--th-color-4);
+    overflow-x: hidden;
+}
+
+.testimonal h2 {
+    margin-bottom: 60px;
+}
+
+.testimonal-box {
+    padding: 30px 20px 50px 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    transition: all .5s;
+}
+
+.testimonal-box:hover {
+    z-index: 1;
+    transform: rotate(0deg) !important;
+}
+
+.testimonal-box .test-img {
+    margin: auto;
+    max-width: 120px;
+    width: 100%;
+}
+
+.testimonal-box .test-img img {
+    width: 100%;
+}
+
+.testimonal-box .test-title {
+    font-family: var(--th-font-2);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+.testimonal-box .test-star {
+    display: flex;
+    gap: 10px;
+    color: var(--th-color-2);
+    font-size: 20px;
+    justify-content: center;
+}
+
+#testimonal-box-1 {
+    background-color: #9EDB9A;
+    transform: rotate(13.459deg);
+}
+
+#testimonal-box-1 .test-title {
+    color: #D2FFD0;
+}
+
+#testimonal-box-2 {
+    background-color: #F56E7C;
+    transform: rotate(-14.514deg);
+}
+
+#testimonal-box-2 .test-title {
+    color: #FEE3E6;
+}
+
+#testimonal-box-3 {
+    background-color: #FFD66C;
+    transform: rotate(13.39deg);
+}
+
+#testimonal-box-3 .test-title {
+    color: #BD9D4A;
+}
+
+#testimonal-box-4 {
+    background-color: #AEE0F6;
+    transform: rotate(-5.595deg);
+}
+
+#testimonal-box-4 .test-title {
+    color: #649CC6;
+}
+
+.test-designation {
+    color: var(--th-color-3);
+    font-family: var(--th-font-2);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+/* ------------- Testimonal Section End ------------- */
+
+/* 17.Resources Hero Section Start ------------------------------ */
+#resource-hero {
+    padding: 300px 0 250px 0;
+}
+
+#resource-hero .rh-img {
+    overflow-x: hidden;
+}
+
+/* ------------- Resources Hero Section End ------------- */
+
+/* 18.Resources Hero Section Start ------------------------------ */
+.media-resource-box {
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    background-color: var(--th-color-4);
+}
+
+/* ------------- Resources Hero Section End ------------- */
+/* 19.Read Our Blogs Section Start ------------------------------ */
+.read-our-blogs {
+    background-image: url(../image/our-blogs.png);
+}
+
+/* ------------- Read Our Blogs Section End ------------- */
+
+/* 19.Service Section Start ------------------------------ */
+section.service {
+    padding-top: 100px;
+    padding-bottom: 0;
+    background-color: var(--th-color-2);
+}
+
+#service-hero {
+    padding: 150px 0 100px 0;
+}
+
+.service-animation {
+    /* margin-top: 80px; */
+    padding: 150px 0;
+    position: relative;
+    z-index: 10;
+    transform: skewY(3deg);
+}
+
+.service-animation .row {
+    transform: skewY(-3deg);
+
+}
+
+/* .service-animation::after{
+    content: " ";
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    z-index: -1;
+} */
+#service-box-1 {
+    background-color: var(--th-color-2);
+}
+
+#service-box-1 {
+    transform: skewY(3deg);
+    background-color: var(--th-color-2);
+}
+
+/* #service-box-1::after{
+    background-color: var(--th-color-2);
+    transform: rotate(-2deg);
+} */
+#service-box-2 {
+    background-color: #9EC7D9;
+}
+
+/* #service-box-2::after{
+    background-color: #9EC7D9;
+    transform: rotate(2deg);
+} */
+#service-box-3 {
+    background-color: #9EDB9A;
+}
+
+/* #service-box-3::after{
+    background-color: #9EDB9A;
+    transform: rotate(-2deg);
+} */
+#service-box-4 {
+    background-color: #F56E7C;
+}
+
+/* #service-box-4::after{
+    background-color: #F56E7C;
+    transform: rotate(2deg);
+} */
+#service-box-5 {
+    background-color: var(--th-color-2);
+}
+
+/* #service-box-5::after{
+    background-color: var(--th-color-2);
+    transform: rotate(-2deg);
+} */
+
+/* ------------- Service Section End ------------- */
+
+/* 20.Course Section Start ------------------------------ */
+#course-hero {
+    background-color: var(--th-color-2);
+    padding: 150px 10px 150px 10px;
+    overflow-x: hidden;
+}
+
+.c-course {
+    padding: 100px 0 0 0;
+}
+
+.c-course-box {
+    border-radius: 30px;
+    padding: 40px 40px 60px 40px;
+    position: relative;
+    transition: all .5s;
+    z-index: auto;
+}
+
+.c-course-box:hover {
+    z-index: 1;
+    transform: rotate(0deg) !important;
+}
+
+.c-course-box h3 {
+    text-align: center;
+    font-size: 112px;
+}
+
+#c-course-box-1 {
+    background-color: #9EDB9A;
+    transform: rotate(13.03deg) translate(2000px, 0px);
+}
+
+#c-course-box-1 h3 {
+    color: #C4F9C1;
+}
+
+#c-course-box-2 {
+    background-color: #F56E7C;
+    transform: rotate(-7.53deg) translate(2000px, 0px);
+}
+
+#c-course-box-2 h3 {
+    color: #F8A3AC;
+}
+
+#c-course-box-3 {
+    background-color: #FFD66C;
+    transform: rotate(13.93deg) translate(-2000px, 0px);
+}
+
+#c-course-box-3 h3 {
+    color: #DDB858;
+}
+
+#c-course-box-4 {
+    background-color: #9EC7D9;
+    transform: rotate(-15.18deg) translate(-2000px, 0px);
+}
+
+#c-course-box-4 h3 {
+    color: #AEE0F6;
+}
+
+#c-course-box-5 {
+    background-color: #F56E7C;
+    transform: rotate(-11.69deg) translate(2000px, 0px);
+}
+
+#c-course-box-5 h3 {
+    color: #F8A3AC !important;
+}
+
+#c-course-box-6 {
+    background-color: #9EC7D9;
+    transform: rotate(6.52deg) translate(2000px, 0px);
+}
+
+#c-course-box-6 h3 {
+    color: #AEE0F6 !important;
+}
+
+#c-course-box-7 {
+    background-color: #9EDB9A;
+    transform: rotate(-11.73deg) translate(-2000px, 0px);
+}
+
+#c-course-box-7 h3 {
+    color: #C4F9C1 !important;
+}
+
+#c-course-box-8 {
+    background-color: #FFD66C;
+    transform: rotate(10.62deg) translate(-2000px, 0px);
+}
+
+#c-course-box-8 h3 {
+    color: #DDB858 !important;
+}
+
+/* #c-course-box-1,
+#c-course-box-2,
+#c-course-box-5,
+#c-course-box-6 {
+    transform: translateX(-1000px);
+}
+
+#c-course-box-3,
+#c-course-box-4,
+#c-course-box-7,
+#c-course-box-8 {
+    transform: translateX(1000px);
+} */
+.pre-module {
+    padding-top: 0px;
+}
+
+.pre-module .module-img img {
+    width: 100%;
+    max-width: 662px;
+    transform: translateY(-45px);
+}
+
+.dele {
+    background-color: #000;
+}
+
+.dele img {
+    width: 100%;
+}
+
+.dele-tl {
+    background-color: var(--th-color-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.dele-tl .text-red {
+    font-size: 150px;
+}
+
+.dele-pera p {
+    margin-top: 30px;
+    text-align: left;
+    color: #fff;
+}
+
+.dele .h2 {
+    color: #fff;
+}
+
+.dele .h3 {
+    color: #fff;
+    text-align: right;
+    margin-top: 40px;
+}
+
+/* ------------- Course Section End ------------- */
+
+
+/* 21.Contact Form Section Start ------------------------------ */
+.study-in-spain {
+    position: relative;
+    padding: 0 !important;
+}
+
+.curtain-final {
+    width: 100%;
+    /* position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+
+.study-in-spain h2 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+
+.study-in-spain {
+    padding: 100px 0;
+    /* background: url(../image/study-in-spain.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain; */
+}
+
+.study-in-spain h2 .text-r {
+    color: var(--th-color-1);
+}
+
+.study-in-spain h2 .text-y {
+    color: var(--th-color-2);
+}
+
+/* ------------- Course Section End ------------- */
+
+.spanish-for-kids {
+    background-color: #ffd66c;
+    padding: 0;
+}
+
+.spanish-text {
+    padding: 80px 0;
+}
+
+/* 21.Contact Form Section Start ------------------------------ */
+.contact-student {
+    background-color: var(--th-color-3);
+    padding: 100px 0;
+    position: relative;
+}
+
+.contact-student .form-control,
+.contact-student .form-select,
+.contact-student .input-text,
+.contact-student input::placeholder {
+    background-color: var(--th-color-3) !important;
+    color: #FFF;
+    font-family: var(--th-font-2);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    border-radius: 0;
+    padding: 10px;
+}
+
+.contact-student option {
+    background-color: var(--th-color-3) !important;
+}
+
+.contact-student #step-1 {
+    cursor: pointer;
+}
+
+.contact-student .step-slide {
+    height: 550px;
+}
+
+.contact-student .form-text-last {
+    color: #FFF;
+    font-family: var(--th-font-1);
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 1.354px;
+}
+
+.contact-student .form-text-last .last-2 {
+    color: #52C74B;
+}
+
+.contact-student .form-text-last .last-4 {
+    color: #FFB800;
+}
+
+.contact-student .form-img {
+    width: 100%;
+    max-width: 550px;
+}
+
+.contact-student .form-img img {
+    width: 100%;
+    /* max-width: 320px;
+    position: absolute;
+    right: 0;
+    bottom: 0; */
+}
+
+
+
+/* .course-pera {
+    background-color: var(--th-color-2);
+    padding: 30px;
+    border-radius: 30px;
+    max-width: 80%;
+    margin: auto;
+} */
+/* ------------- Contact Form Section End ------------- */
+
+
+/* 21.Locate Us Section Start ------------------------------ */
+.locate-us {
+    background: #9AC2D4;
+}
+
+.locate-us a {
+    color: var(--th-color-3);
+    font-family: var(--th-font-2);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.48px;
+}
+
+/* ------------- Locate Us Section End ------------- */
+
+
+/* 22.Career Contact Form Section Start ------------------------------ */
+#contact-page .contact-student.career-form {
+    background-color: var(--th-color-2);
+    padding: 150px 0 100px 0;
+}
+
+#contact-page .contact-student.career-form .form-control,
+#contact-page .contact-student.career-form .form-select,
+#contact-page .contact-student.career-form .input-text,
+#contact-page .contact-student.career-form input::placeholder {
+    background-color: var(--th-color-2) !important;
+    color: var(--th-color-3);
+}
+
+#contact-page .contact-student.career-form .form-control,
+#contact-page .contact-student.career-form .form-select {
+    border: 1px solid var(--th-color-3);
+}
+
+#contact-page .contact-student.career-form h2 {
+    color: var(--th-color-3);
+}
+
+/* ------------- Career Contact Form Section End ------------- */
+
+/* 22.Main Blog Section Start ------------------------------ */
+#blog-page {
+    background-color: #FFFDF5;
+}
+
+.main-blog {
+    padding: 150px 0 0 0;
+}
+
+#blog-page .us-media {
+    background-color: #FFFDF5;
+    background-image: none;
+}
+
+#blog-page .us-media .h2 {
+    color: var(--th-color-3);
+}
+
+#blog-page #mainBlog .h3 {
+    color: var(--th-color-3);
+    font-size: 80px;
+}
+
+#blog-page .media-box {
+    background: var(--th-color-2);
+}
+
+/* ------------- Main Blog Section End ------------- */
+
+/* 23.Our Stars Section Start ------------------------------ */
+.our-stars {
+    background-color: var(--th-color-3);
+}
+
+.our-stars .h2 {
+    color: var(--th-color-4);
+}
+
+.os-btn-box {
+    height: 718px;
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+/* Hide the default scrollbar */
+.os-btn-box::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Style the scrollbar track */
+.os-btn-box::-webkit-scrollbar-track {
+    background: var(--th-color-3);
+    /* Change as needed */
+}
+
+/* Style the scrollbar handle */
+.os-btn-box::-webkit-scrollbar-thumb {
+    background: var(--th-color-4);
+    /* Change as needed */
+    border-radius: 10px;
+}
+
+/* Style the scrollbar handle on hover */
+.os-btn-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Change as needed */
+}
+
+.os-btn {
+    width: calc(100%- 30px);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+}
+
+.os-btn.active {
+    background-color: #2e2d2d;
+}
+
+.osb-img {
+    max-width: 150px !important;
+    margin: auto;
+}
+
+.osb-img img {
+    width: 100%;
+}
+
+.osb-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.osb-h {
+    color: var(--th-color-2);
+    font-family: var(--th-font-2);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.64px;
+}
+
+.osb-t {
+    color: var(--th-color-4);
+    font-family: var(--th-font-2);
+    font-size: 18px;
+}
+
+.os-tab-box {
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.os-tab {
+    max-width: 700px;
+    text-align: center;
+}
+
+.ost-h {
+    margin-top: 20px;
+}
+
+.ost-h h5 {
+    color: var(--th-color-2);
+    font-family: var(--th-font-2);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.ost-h h6 {
+    color: var(--th-color-4);
+    font-family: var(--th-font-2);
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.sot-quotes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sot-quotes img {
+    max-width: 80px;
+}
+
+.sot-text p {
+    color: var(--th-color-4);
+    font-family: var(--th-font-2);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 47px */
+    text-align: left;
+    padding: 0 40px;
+}
+
+/* ------------- Our Stars Section End ------------- */
+
+
+/* 24.Feedback Form Section Start ------------------------------ */
+#feedback-page .contact-student {
+    background: url(../image/feedback-form.jpg);
+    background-position: center center;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+#feedback-page .contact-student .h2 {
+    color: var(--th-color-3) !important;
+}
+
+#feedback-page .input-text {
+    background-color: transparent !important;
+    color: var(--th-color-3) !important;
+}
+
+#feedback-page .form-control,
+#feedback-page .contact-student .form-select,
+#feedback-page .contact-student input::placeholder {
+    background-color: var(--th-color-4) !important;
+    color: var(--th-color-3) !important;
+}
+#feedback-page .contact-student option {
+    background-color: var(--th-color-4) !important;
+}
+.feedback-rating {
+    --star-rating-max-stars: 10;
+    --star-rating-star-color-active: #ff0;
+    --star-rating-star-color-disabled: #555;
+    --star-rating-star-color-hover: #daa520;
+    --star-rating-star-color-selected: var(--star-rating-star-color-hover);
+    --star-rating-star-color: #333333;
+    --star-rating-star-scale-hover: 1.3;
+    --star-rating-star-size: 5;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: repeat(var(--star-rating-max-stars), 1fr);
+    grid-template-columns: 1fr;
+    width: fit-content;
+}
+
+.feedback-rating label {
+    cursor: pointer;
+    text-align: center;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.feedback-rating input {
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    grid-row: 2;
+    height: auto;
+    margin: 0;
+    padding: 0.2rem;
+    text-align: center;
+    transition: transform 0.2s ease-out;
+    width: auto;
+}
+
+.feedback-rating input:after {
+    color: var(--star-rating-star-color);
+    content: "\2606\FE0F";
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(1rem * var(--star-rating-star-size));
+}
+
+.feedback-rating input:hover:after {
+    color: var(--star-rating-star-color-hover);
+    content: "\2605\FE0F";
+}
+
+.feedback-rating input:checked:after {
+    color: var(--star-rating-star-color-selected);
+    content: "\2605\FE0F";
+}
+
+.feedback-rating input:has(~ input:hover):after,
+.feedback-rating input:has(~ input:checked):after,
+.feedback-rating input:has(~ input:focus):after {
+    color: var(--star-rating-star-color-selected);
+    content: "\2605";
+}
+
+.feedback-rating input:hover~input:after {
+    color: var(--star-rating-star-color);
+    content: "\2606";
+}
+
+@media (hover) {
+    .feedback-rating input:hover {
+        transform: scale(var(--star-rating-star-scale-hover));
+    }
+
+    .feedback-rating input:active {
+        transform: scale(calc(var(--star-rating-star-scale-hover) + 0.3));
+    }
+
+    .feedback-rating input:active:after {
+        animation: 0.1s linear 0s forwards star-rating-active-anim;
+    }
+}
+
+@keyframes star-rating-active-anim {
+    from {
+        color: var(--star-rating-star-color-hover);
+    }
+
+    to {
+        color: var(--star-rating-star-color-active);
+    }
+}
+
+.feedback-rating:disabled {
+
+    & label,
+    & input {
+        pointer-events: none;
+    }
+
+    & label,
+    & input:after,
+    & input:has(~ input:hover):after,
+    & input:has(~ input:checked):after,
+    & input:has(~ input:focus):after {
+        color: var(--star-rating-star-color-disabled);
+    }
+}
+
+/* ------------- Feedback Form Section End ------------- */

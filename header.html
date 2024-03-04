@@ -1,0 +1,65 @@
+<div class="header">
+  <div class="nav">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="image/logo-light.png" class="w-100" alt="" />
+      </a>
+    </div>
+    <div class="nav-menu-btn" id="btn-menu">
+      <img src="image/Menu.svg" class="w-100" alt="" />
+    </div>
+  </div>
+  <div class="nav-container">
+    <div class="nav">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="image/logo-dark.png" class="w-100" alt="" />
+        </a>
+      </div>
+      <div class="nav-menu-btn" id="btn-close">
+        <img src="image/close.svg" class="w-100" alt="" />
+      </div>
+    </div>
+    <div class="menu">
+      <ul class="menu-container">
+        <img src="image/nav-icon.svg" id="nav-icon" alt="" />
+        <li class="menu-item" data-nav="home-page"><a href="index.html">HOME</a></li>
+        <li class="menu-item" data-nav="about-page"><a href="about.html">ABOUT</a></li>
+        <li class="menu-item" data-nav="service-page"><a href="service.html">SERVICES</a></li>
+        <li class="menu-item" data-nav="course-page"><a href="course.html">COURSES</a></li>
+        <li class="menu-item" data-nav="resource-page"><a href="resource.html">RESOURCES</a></li>
+        <li class="menu-item" data-nav="contact-page"><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+  // Header js
+  $("#btn-menu, #btn-close").click(function () {
+    $(".nav-container").toggleClass("active");
+  });
+  // Menu Hover
+  $(".menu-item").hover(function () {
+    var index = $(this).index() - 1;
+    // alert(index)
+    var pageClass = ['home-page', 'about-page', 'service-page', 'course-page', 'resource-page', 'contact-page'][index];
+
+    $('.menu-container').attr('class', 'menu-container').addClass(pageClass);
+    $('.menu-container li').removeClass('active').eq(index).addClass('active');
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    var bodyId = $('body').attr('id');
+    // Find the element with class "nav-link" and matching data-nav attribute
+    $('.menu-container').addClass(bodyId);
+
+    $('.menu-item').removeClass('active');
+    $('.menu-item[data-nav="' + bodyId + '"]').addClass('active');
+
+    if (bodyId === 'resource-page' || bodyId === 'service-page' || bodyId === 'course-page') {
+        // Update the img src for .navbar-brand
+        $('.nav-logo img').attr('src', 'image/logo-dark.png');
+      }
+  });
+</script>

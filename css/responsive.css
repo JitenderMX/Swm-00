@@ -1,0 +1,524 @@
+/* Extra large devices (1200px and down) */
+
+@media screen and (max-width: 1200px) {
+    #home-hero img#flag {
+        top: 26%;
+        right: 11%;
+    }
+}
+
+
+
+/* Large devices (992px and down) */
+
+@media screen and (max-width: 992px) {
+
+    .why-choose .bull-img {
+        max-width: 250px;
+    }
+
+    .why-choose .matador-img {
+        max-height: 300px;
+    }
+
+    #home-hero .h1 {
+        font-size: 100px;
+    }
+
+    #blog-page #mainBlog .h3 {
+        color: var(--th-color-3);
+        font-size: 60px;
+    }
+
+    footer .bg-black,
+    footer .bg-black a {
+        font-size: 18px;
+    }
+
+    .footer a,
+    .footer p {
+        font-size: 22px;
+    }
+
+    .course-box {
+        flex-basis: 30%;
+        max-width: 30%;
+        border-radius: 30px;
+    }
+    .course-box-1 .co-box,
+    .course-box-2 .co-box,
+    .course-box-3 .co-box{
+        padding: 20px 20px 60px 20px;
+    }
+    .h2 {
+        font-size: 70px;
+        line-height: 110%;
+    }
+    .h1 .text-red {
+        font-size: 64px;
+    }
+    .h2 .text-red {
+        font-size: 45px;
+    }
+   
+
+    #home-hero img#flag {
+        max-width: 120px;
+        top: -45%;
+        right: -15%;
+    }
+
+    /* Course Page  */
+    .c-course-box h3 {
+        font-size: 100px;
+    }
+
+    /* About Page  */
+    .os-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .osb-text {
+        gap: 10px;
+    }
+
+}
+
+
+/* Medium devices (768px and down) */
+
+@media screen and (max-width: 768px) {
+    #blog-page #mainBlog .h3 {
+        font-size: 40px;
+    }
+
+    .main-blog {
+        padding: 100px 0 0 0;
+    }
+
+    /* home page  */
+    .swiper-btn .fas{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+    }
+    .why-choose .bull-img {
+        bottom: 20px;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .why-choose .matador-img {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        z-index: 1;
+        width: auto;
+        max-height: 250px;
+    }
+
+    .nav {
+        padding: 15px;
+    }
+
+    .nav .nav-logo {
+        max-width: 50px;
+    }
+
+    #btn-menu,
+    #btn-close {
+        cursor: pointer;
+        max-width: 50px !important;
+    }
+
+    #home-hero .h1 {
+        font-size: 80px;
+        text-align: center;
+    }
+
+    #home-hero img#flag {
+        max-width: 150px;
+        top: -109%;
+        right: -22%;
+    }
+
+    .course-container {
+        justify-content: space-evenly;
+    }
+
+    .course-box {
+        flex-basis: 45%;
+        max-width: 45%;
+        border-radius: 30px;
+        transform: rotate(0deg);
+        margin-top: 20px;
+    }
+
+    .course-box-1 .co-box,
+    .course-box-2 .co-box,
+    .course-box-3 .co-box,
+    .course-box-4 .co-box {
+        padding: 20px;
+    }
+
+    .know-box {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .know-mid {
+        width: 0px !important;
+        min-height: 0px !important;
+    }
+
+    .know-left {
+        max-width: 100%;
+    }
+
+    .know-right {
+        max-width: 100%;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .course-box h3 {
+        font-size: 50px;
+    }
+
+    .know-left p {
+        margin-bottom: 20px;
+    }
+    
+    .h1 .text-red {
+        font-size: 45px;
+    }
+
+    .h2 {
+        font-size: 55px;
+    }
+
+       .h2 .text-red {
+        font-size: 32px;
+    }
+
+    .h3 {
+        font-size: 32px;
+        line-height: 110%;
+    }
+
+    .h3 .text-red {
+        font-size: 20px;
+    }
+
+    .th-btn {
+        font-size: 30px;
+        padding: 10px 24px;
+    }
+
+    .testimonal-box {
+        transform: rotate(0deg) !important;
+    }
+
+    #testimonial-b .col-6 {
+        padding: 20px;
+    }
+
+    .footer img {
+        max-width: 150px;
+    }
+
+    .footer {
+        padding: 200px 15px 50px 15px;
+    }
+
+    #flag {
+        display: none;
+    }
+
+    #home-hero img#ball {
+        max-width: 120px;
+        bottom: 65px;
+        left: 5px;
+    }
+
+    /* About Page Css */
+    .os-btn-box {
+        display: flex;
+    }
+
+    .os-btn-box {
+        height: auto;
+        overflow-y: scroll;
+        padding-right: 10px;
+    }
+
+    .os-btn-box::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .os-tab {
+        max-width: 700px;
+        text-align: center;
+    }
+
+    .os-btn {
+        flex: 1;
+    }
+
+    .osb-img {
+        width: 100%;
+        max-width: 90px !important;
+        min-width: 90px !important;
+        margin: auto;
+    }
+
+    .osb-text {
+        display: none;
+    }
+    .os-tab-box {
+        padding: 20px;
+    }
+    .ost-h h5 {
+        font-size: 24px;
+    }
+
+    .ost-h h6 {
+        font-size: 16px;
+    }
+
+    .sot-quotes img {
+        max-width: 40px;
+    }
+
+    .sot-text p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .we-are-head .h2 {
+        line-height: 100%;
+        margin-bottom: 0;
+    }
+
+    .we-are-head .certifide {
+        max-width: 120px;
+    }
+
+    .about-our-team .team-box img {
+        max-width: 150px;
+    }
+
+    .about-our-team .team-box h4 {
+        font-size: 20px;
+    }
+
+    .about-our-team .team-box li {
+        font-size: 18px;
+    }
+
+    .gallery-img {
+        max-width: 160px;
+        min-width: 160px;
+    }
+
+    .gallery-box {
+        margin-top: 30px;
+        animation: slideAnimation 55s linear infinite alternate;
+    }
+
+    @keyframes slideAnimation {
+        from {
+            transform: translateX(0px);
+        }
+
+        to {
+            transform: translateX(-5000px);
+        }
+    }
+
+    /* Service Page Css */
+    #service-hero {
+        padding: 150px 0 50px 0;
+    }
+
+    /* Course Page Css */
+    .dele-tl .text-red {
+        font-size: 80px;
+    }
+
+    /* Course Page  */
+    .c-course-box h3 {
+        font-size: 70px;
+    }
+
+    .c-course-box {
+        padding: 20px 20px 100px 20px;
+    }
+
+    /* Resource Page  */
+    #resource-hero {
+        padding: 150px 0 50px 0;
+    }
+
+    .media-box {
+        padding: 20px 10px 0px 10px;
+    }
+
+    .media-box .media-body {
+        margin-bottom: 20px;
+    }
+
+    .media-h {
+        margin-bottom: 15px;
+    }
+
+    .us-media .row .media-box {
+        padding: 20px;
+    }
+
+    .us-media-resource .row .media-box {
+        padding: 0px;
+        padding-top: 10px;
+    }
+
+    .us-media-resource p {
+        margin-bottom: 0px;
+    }
+
+    .our-course {
+        padding-top: 100px;
+    }
+
+    .study-in-spain .h2 {
+        display: block;
+    }
+
+    .study-in-spain {
+        padding: 50px 0;
+        background-image: none;
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    /* Course Page */
+
+    .contact-student .form-control,
+    .contact-student .form-select,
+    .contact-student input::placeholder {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 0;
+        padding: 10px;
+    }
+
+}
+
+
+/* Small devices (576px and down) */
+
+@media screen and (max-width: 576px) {
+
+    .download-left,
+    .download-right {
+        height: auto !important;
+    }
+
+    .spanish-text {
+        padding: 40px 0;
+    }
+
+    .menu-item {
+        font-size: 40px;
+    }
+
+    #nav-icon {
+        display: none;
+    }
+
+    #home-hero .h1 {
+        font-size: 60px;
+    }
+
+    #home-hero {
+        padding: 200px 0;
+    }
+
+    #home-hero img#ball {
+        max-width: 110px;
+        bottom: 35px;
+    }
+
+    .course-box {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 18px;
+    }
+
+    footer .bg-black,
+    footer .bg-black a {
+        font-size: 16px;
+    }
+
+    /* About page Css */
+    .hero-text {
+        transform: translate(0, 0);
+    }
+
+    #about-hero {
+        height: 550px;
+    }
+
+    .our-presence .presence-text {
+        transform: translate(0%, 0%);
+    }
+
+    .about-our-team .team-box h4 {
+        font-size: 18px;
+    }
+
+    .about-our-team .team-box li {
+        font-size: 16px;
+    }
+
+    /* Course Page  */
+    .c-course-box h3 {
+        font-size: 50px;
+    }
+
+    .c-course {
+        padding: 0px;
+    }
+
+    .c-course-box {
+        padding: 20px;
+        transform: rotate(0deg) !important;
+        margin-top: 20px;
+    }
+
+    .contact-student .form-text-last {
+        font-size: 34px;
+        line-height: 120%;
+    }
+
+    .service {
+        padding: 50px 0 !important;
+    }
+
+    .service-animation {
+        padding: 50px 0;
+    }
+}

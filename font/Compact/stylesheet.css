@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Compacta';
+    src: url('Compacta.eot');
+    src: url('Compacta.eot?#iefix') format('embedded-opentype'),
+        url('Compacta.woff2') format('woff2'),
+        url('Compacta.woff') format('woff'),
+        url('Compacta.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
