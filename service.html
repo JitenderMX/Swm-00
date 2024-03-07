@@ -68,7 +68,10 @@
         <div class="container-xxl">
           <div class="row align-items-center">
             <div class="col-md-6">
-              <div class="h2"> <div class="text-aut">Translation</div> <div class="text-red">and</div> Interpretation </div>
+              <div class="h2">
+                <div class="text-aut">Translation</div>
+                <div class="text-red">and</div> Interpretation
+              </div>
             </div>
             <div class="col-md-6">
               <p>Transform your future with our translation and interpretation training program. Master the art of
@@ -84,7 +87,10 @@
         <div class="container-xxl">
           <div class="row align-items-center">
             <div class="col-md-6 mt-4 order-sm-2">
-              <div class="h2"><div class="text-aut">Corporate</div> <div class="text-red">Training</div>SESSIONS</div>
+              <div class="h2">
+                <div class="text-aut">Corporate</div>
+                <div class="text-red">Training</div>SESSIONS
+              </div>
             </div>
             <div class="col-md-6 mt-4 order-sm-1">
               <p>Empower your team for success in the global marketplace with our easy-to-follow Corporate Training
@@ -100,7 +106,9 @@
         <div class="container-xxl">
           <div class="row align-items-center">
             <div class="col-md-6">
-              <div class="h2"><div class="text-aut">JoB</div> <soan class="text-red">Training</soan>
+              <div class="h2">
+                <div class="text-aut">JoB</div>
+                <soan class="text-red">Training</soan>
               </div>
             </div>
             <div class="col-md-6">
@@ -120,7 +128,10 @@
           <div class="row align-items-center">
 
             <div class="col-md-6 mt-4 order-sm-2">
-              <div class="h2"><div class="text-aut">Private</div> <div class="text-red"> Sessions</div></div>
+              <div class="h2">
+                <div class="text-aut">Private</div>
+                <div class="text-red"> Sessions</div>
+              </div>
             </div>
             <div class="col-md-6 mt-4 order-sm-1">
               <p>Boost your language skills with personalised private sessions. Our skilled instructors customise
@@ -137,7 +148,10 @@
         <div class="container-xxl">
           <div class="row align-items-center">
             <div class="col-md-6 mt-4">
-              <div class="h2"> <div class="text-red">International</div> <div class="text-aut">Affiliations</div></div>
+              <div class="h2">
+                <div class="text-red">International</div>
+                <div class="text-aut">Affiliations</div>
+              </div>
             </div>
             <div class="col-md-6 mt-4">
               <p>We proudly announce our international affiliations as an authorised centre for conducting SIELE and
@@ -177,26 +191,38 @@
   <!-- ========== main Js ========== -->
   <script src="js/main.js"></script>
   <script>
-   function initializeAnimations() {
-        var windowWidth = $(window).width();
-        if (windowWidth >= 768) {
-            gsap.registerPlugin(ScrollTrigger);
-            gsap.utils.toArray(".service-animation").forEach((section, i) => {
-                ScrollTrigger.create({
-                    trigger: section,
-                    start: "top top",
-                    pin: true,
-                    pinSpacing: false,
-                    end: "+=400%",
-                    // markers:true,
-                    scrub: true,
-                });
-            });
-        }
-    }
+    //  function initializeAnimations() {
+    //       var windowWidth = $(window).width();
+    //       if (windowWidth >= 768) {
+    //           gsap.registerPlugin(ScrollTrigger);
+    //           gsap.utils.toArray(".service-animation").forEach((section, i) => {
+    //               ScrollTrigger.create({
+    //                   trigger: section,
+    //                   start: "top top",
+    //                   pin: true,
+    //                   pinSpacing: false,
+    //                   end: "+=400%",
+    //                   // markers:true,
+    //                   scrub: true,
+    //               });
+    //           });
+    //       }
+    //   }
 
-    // Call the function on page load
-    initializeAnimations();
+    //   // Call the function on page load
+    //   initializeAnimations();
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray(".service-animation").forEach((section, i) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+        end: "+=400%",
+        // markers:true,
+        scrub: true,
+      });
+    });
   </script>
 </body>
 

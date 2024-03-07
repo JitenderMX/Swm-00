@@ -235,7 +235,7 @@
     }
 
     .footer {
-        padding: 200px 15px 50px 15px;
+        padding: 50px 15px 50px 15px;
     }
 
     #flag {
@@ -408,7 +408,7 @@
         background-size: contain;
     }
 
-    /* Course Page */
+    /* Contact Page */
 
     .contact-student .form-control,
     .contact-student .form-select,
@@ -420,6 +420,37 @@
         border-radius: 0;
         padding: 10px;
     }
+    
+.fh-text {
+    color: var(--th-color-3);
+    font-family: var(--th-font-2);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.fh-icon {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all .5s;
+    cursor: pointer;
+}
+.fh-text{
+    font-size: 18px;
+    font-weight: 100%;
+}
+
+.faq-text {
+    color: var(--th-color-3);
+    font-family: var(--th-font-2);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 200%;
+    /* 200% */
+    padding: 20px;
+}
 
 }
 
@@ -454,7 +485,7 @@
     }
 
     #home-hero img#ball {
-        max-width: 110px;
+        max-width: 80px;
         bottom: 35px;
     }
 
@@ -505,7 +536,7 @@
 
     .c-course-box {
         padding: 20px;
-        transform: rotate(0deg) !important;
+        /* transform: rotate(0deg) !important; */
         margin-top: 20px;
     }
 
@@ -520,5 +551,8 @@
 
     .service-animation {
         padding: 50px 0;
+    }
+    .our-team{
+        padding: 100px 0;
     }
 }

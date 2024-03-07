@@ -638,7 +638,7 @@ ul {
 /* 11.Footer Section Start ------------------------------ */
 footer {
     position: relative;
-    z-index: 1000;
+    z-index: 99;
 }
 
 .footer {
@@ -953,15 +953,18 @@ footer .bg-black a:hover {
     width: auto;
     max-height: 400px;
 }
+
 .why-choose .h2 .text-aut {
-   color: white;
+    color: white;
 }
+
 .why-choose p {
-   color: white;
-   font-size: 22px;
-   text-align: center;
+    color: white;
+    font-size: 22px;
+    text-align: center;
 }
-.swiper-btn .fas{
+
+.swiper-btn .fas {
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -973,9 +976,11 @@ footer .bg-black a:hover {
     cursor: pointer;
     transition: all .5s;
 }
-.swiper-btn .fas.grey{
+
+.swiper-btn .fas.grey {
     background-color: #A19F9E;
 }
+
 .why-choose .col-md-3 {
     position: relative;
 }
@@ -1080,7 +1085,7 @@ footer .bg-black a:hover {
 .testimonal {
     padding: 100px 0;
     background-color: var(--th-color-4);
-    overflow-x: hidden;
+    overflow: hidden !important;
 }
 
 .testimonal h2 {
@@ -1633,6 +1638,14 @@ section.service {
     background-image: none;
 }
 
+.us-media .slick-dots li button:before {
+    color: #fff;
+}
+
+.us-media .slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
 #blog-page .us-media .h2 {
     color: var(--th-color-3);
 }
@@ -1811,9 +1824,11 @@ section.service {
     background-color: var(--th-color-4) !important;
     color: var(--th-color-3) !important;
 }
+
 #feedback-page .contact-student option {
     background-color: var(--th-color-4) !important;
 }
+
 .feedback-rating {
     --star-rating-max-stars: 10;
     --star-rating-star-color-active: #ff0;
@@ -1927,3 +1942,70 @@ section.service {
 }
 
 /* ------------- Feedback Form Section End ------------- */
+
+/* 25.FAQ Section Start ------------------------------ */
+.faq {
+    background: url(../image/faq-bg.jpg);
+    background-color: white;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 80px 0px;
+    position: relative;
+}
+
+.faq-img {
+    width: 100%;
+    max-width: 475px;
+}
+
+.faq-h {
+    cursor: pointer;
+}
+
+.faq-img img {
+    width: 100%;
+}
+
+.faq-box {
+    border-radius: 8px;
+    border: 2px solid var(--th-color-2);
+}
+
+.fh-text {
+    color: var(--th-color-3);
+    font-family: var(--th-font-2);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.fh-icon {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: var(--th-color-2);
+    color: var(--th-color-3);
+    font-family: var(--th-font-2);
+    font-size: 24px;
+    font-weight: 600;
+    transition: all .5s;
+}
+
+.fh-icon:hover {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #9AC2D4;
+}
+
+.faq-text {
+    color: var(--th-color-3);
+    font-family: var(--th-font-2);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 200%;
+    /* 200% */
+    padding: 20px 20px 40px 40px;
+}
+
+/* ------------- FAQ Section End ------------- */

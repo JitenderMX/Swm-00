@@ -40,6 +40,10 @@
 
   <!-- fontawesome Icon  -->
   <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet" />
+
+  <!-- Slick slider Css  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
 </head>
 
 <body id="about-page">
@@ -167,11 +171,13 @@
   <!-- US IN MEDIA Hero Section Start -->
   <section class="us-media">
     <div class="container-xxl">
-      <div class="row justify-content-between">
+      <div class="row">
         <div class="col-12">
           <div class="h2">US IN MEDIA</div>
         </div>
-        <div class="col-sm-6 col-md-4 mt-3">
+      </div>
+      <div class="row justify-content-between" id="us-media-slider">
+        <div class="col-sm-6 col-md-4 mt-3 p-2">
           <div class="media-box">
             <div class="media-h">
               <i class="far fa-file-chart-line"></i>
@@ -204,7 +210,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 mt-3">
+        <div class="col-sm-6 col-md-4 mt-3 p-2">
           <div class="media-box">
             <div class="media-h">
               <i class="far fa-file-chart-line"></i>
@@ -235,7 +241,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 mt-3">
+        <div class="col-sm-6 col-md-4 mt-3 p-2">
           <div class="media-box">
             <div class="media-h">
               <i class="far fa-file-chart-line"></i>
@@ -739,7 +745,7 @@
   <!-- ========== main Js ========== -->
   <script src="js/main.js"></script>
   <script>
-     Fancybox.bind()
+    Fancybox.bind()
     $(".os-btn").click(function () {
       $(".os-btn").removeClass("active");
       $(this).addClass("active");
@@ -764,6 +770,14 @@
             scrub: true,
           });
         });
+      } else{
+        $("#us-media-slider").slick({
+      dots: true,
+      arrows: false,
+      infinite: true,
+      autoplay: false,
+      autoplaySpeed: 2000,
+    });
       }
     }
 
