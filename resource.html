@@ -56,7 +56,10 @@
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center mb-md-5">
                     <div class="rh-head mb-3">
-                        <div class="h2 justify-content-center"><div class="text-red">WE</div> <div class="text-aut">ARE FEATURED IN </div></div>
+                        <div class="h2 justify-content-center">
+                            <div class="text-red">WE</div>
+                            <div class="text-aut">ARE FEATURED IN </div>
+                        </div>
                     </div>
                     <div class="rh-text">
                         <p>We've proudly appeared in news features, acknowledging our dedication to delivering top-notch
@@ -109,7 +112,7 @@
                 <div class="col-12">
                     <div class="h2">US IN MEDIA</div>
                 </div>
-                <div class="col-12 ">
+                <div class="col-12" id="us-media-slider-2">
                     <div class="media-resource-box mt-3">
                         <div class="row align-items-center">
                             <div class="col-md-6 order-md-2">
@@ -189,11 +192,16 @@
     <!-- US IN MEDIA Hero Section Start -->
     <section class="us-media read-our-blogs">
         <div class="container-xxl">
-            <div class="row justify-content-between">
+            <div class="row">
                 <div class="col-12">
-                    <div class="h2"> <div class="text-aut">READ</div> <span class="text-red">OUR</span> <div class="text-aut">BLOGS</div></div>
+                    <div class="h2">
+                        <div class="text-aut">READ</div> <span class="text-red">OUR</span>
+                        <div class="text-aut">BLOGS</div>
+                    </div>
                 </div>
-                <div class="col-sm-6 col-md-4 mt-3">
+            </div>
+            <div class="row justify-content-between" id="us-media-slider">
+                <div class="col-sm-6 col-md-4 mt-3 p-2">
                     <div class="media-box">
                         <div class="media-h">
                             <i class="far fa-file-chart-line"></i>
@@ -209,7 +217,7 @@
                                 Sports. These internationally recognized certificates cover a spectrum of levels, from
                                 A1 for beginners to C2 for advanced users, providing a comprehensive evaluation of
                                 linguistic abilities. The examination process, meticulously crafted in collaboration
-                                with the University of Salamanca and Instituto Cervantes, involves four... 
+                                with the University of Salamanca and Instituto Cervantes, involves four...
                                 <!-- <span class="three-dot">...</span>
                                 <span class="read-more-text d-none">
                                     key sections: Reading Comprehension, Listening Comprehension, Writing, and Speaking.
@@ -224,15 +232,16 @@
     
                                 </span> -->
                             </p>
-                           
-                            <a href="blog.html#journey-through" class="read-more th-btn" data-text="Show Less">Read More</a>
+
+                            <a href="blog.html#journey-through" class="read-more th-btn" data-text="Show Less">Read
+                                More</a>
                         </div>
                         <div class="media-f">
                             <p>9 de febrero de 2024</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 mt-3">
+                <div class="col-sm-6 col-md-4 mt-3 p-2">
                     <div class="media-box">
                         <div class="media-h">
                             <i class="far fa-file-chart-line"></i>
@@ -270,15 +279,16 @@
     
                                 </span> -->
                             </p>
-                            
-                            <a href="blog.html#modernising-spanish" class="read-more th-btn" data-text="Show Less">Read More</a>
+
+                            <a href="blog.html#modernising-spanish" class="read-more th-btn" data-text="Show Less">Read
+                                More</a>
                         </div>
                         <div class="media-f">
                             <p>8 de febrero de 2024</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 mt-3">
+                <div class="col-sm-6 col-md-4 mt-3 p-2">
                     <div class="media-box">
                         <div class="media-h">
                             <i class="far fa-file-chart-line"></i>
@@ -341,7 +351,23 @@
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
     <script>
+        function initializeAnimations() {
+            var windowWidth = $(window).width();
+            if (windowWidth <= 768) {
+                $("#us-media-slider, #us-media-slider-2").slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    autoplay: false,
+                    autoplaySpeed: 2000,
+                });
+            } else {
+               
+            }
+        }
 
+        // Call the function on page load
+        initializeAnimations();
     </script>
 </body>
 

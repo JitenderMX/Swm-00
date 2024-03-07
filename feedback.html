@@ -150,7 +150,32 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feedback-s-4">
+                            <div class="feedback-s-12">
+                                <div class="row justify-content-center align-items-center step-slide">
+                                    <div class="col-11 col-md-8">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-12">
+                                                <select id="level-you-teach" name="level-you-teach" class="form-select">
+                                                    <option value="select-level-you-teach" selected>SELECT LEVEL YOU TEACH
+                                                    </option>
+                                                    <option value="A1">A1</option>
+                                                    <option value="A2">A2</option>
+                                                    <option value="B1">B1</option>
+                                                    <option value="B2">B2</option>
+                                                    <option value="C1">C1</option>
+                                                    <option value="C2">C2</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-12 mt-3  d-flex justify-content-center">
+                                                <div class="th-btn" id="feedback-s-12-check">
+                                                    SUBMIT
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="feedback-s-4">
                                 <div class="row justify-content-center align-items-center step-slide">
                                     <div class="col-11 col-md-8">
                                         <div class="row justify-content-center">
@@ -182,7 +207,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="feedback-s-5">
                                 <div class="row justify-content-center align-items-center step-slide">
                                     <div class="col-11 col-md-8">
@@ -434,6 +459,7 @@
         $('input[name="who-are-you"]').change(function () {
             if ($(this).val() === 'Student') {
                 $('.s7-submit').addClass("d-none");
+                $('.feedback-s-12').addClass("d-none");
                 $('.feedback-slider').slick('slickNext');
             }
             else if ($(this).val() === 'Teacher') {
@@ -464,6 +490,22 @@
             // Full Name validation
             if ($('select[name="mode"]').val() === "select-mode") {
                 alert("Please Please Valid Mode");
+                return false;
+            }
+            $('.feedback-slider').slick('slickNext');
+        });
+        $('#feedback-s-12-check').click(() => {
+            // Full Name validation
+            if ($('select[name="level-you-teach"]').val() === "select-level-you-teach") {
+                alert("Please Please Valid Level");
+                return false;
+            }
+            $('.feedback-slider').slick('slickNext');
+        });
+        $('#feedback-s-10-check').click(() => {
+            // Full Name validation
+            if ($('select[name="dele-level"]').val() === "select-dele-level") {
+                alert("Please Please Valid Level");
                 return false;
             }
             $('.feedback-slider').slick('slickNext');
@@ -501,9 +543,12 @@
         $('input[name="next-level"]').change(function () {
             $('.feedback-slider').slick('slickNext');
         });
+        $('input[name="planning-dele"]').change(function () {
+            $('.feedback-slider').slick('slickNext');
+        });
         $('input[name="recommend"]').change(function () {
             $('button[type="submit"]').removeClass("d-none");
-                $('.feedback-slider').slick('slickNext');
+                // $('.feedback-slider').slick('slickNext');
         });
     </script>
 </body>

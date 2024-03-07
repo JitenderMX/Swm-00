@@ -717,13 +717,13 @@
 
       if (windowWidth <= 768) {
         // alert(`window is less then 768px ${windowWidth}`)
-        $("#testimonial-b").slick({
-          dots: true,
-          arrows: false,
-          infinite: true,
-          autoplay: false,
-          autoplaySpeed: 2000,
-        });
+        // $("#testimonial-b").slick({
+        //   dots: true,
+        //   arrows: false,
+        //   infinite: false,
+        //   autoplay: false,
+        //   autoplaySpeed: 2000,
+        // });
       } else {
         // alert("window is grater then 768px")
         
@@ -774,21 +774,21 @@
         // scrub: true,
       },
     })
-    gsap.fromTo(".bull-img", {
-      transform: 'translateX(-20vw)'
-    }, {
-      transform: 'translateX(120vw)',
-      duration: 5, // Animation duration in seconds
-      ease: "linear",
-      // rotation: 560,
-      scrollTrigger: {
-        trigger: ".bull-img",
-        start: "-=800px",
-        end: "+=400px",
-        // markers:true,
-        // scrub: true,
-      },
-    })
+    // gsap.fromTo(".bull-img", {
+    //   transform: 'translateX(-20vw)'
+    // }, {
+    //   transform: 'translateX(120vw)',
+    //   duration: 5, // Animation duration in seconds
+    //   ease: "linear",
+    //   // rotation: 560,
+    //   scrollTrigger: {
+    //     trigger: ".bull-img",
+    //     start: "-=800px",
+    //     end: "+=400px",
+    //     // markers:true,
+    //     // scrub: true,
+    //   },
+    // })
     gsap.from(".course-box", {
           y: 200,
           ease: "linear",

@@ -6,7 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $keep_me_anonymous = $_POST["keep-me-anonymous"];
     $mode = $_POST["mode"];
-    $institute_location = $_POST["institute-location"];
+    $level_you_teach = $_POST["level-you-teach"];
+    // $institute_location = $_POST["institute-location"];
     $improve_us = $_POST["improve-us"];
     $rating = $_POST["rating"];
 
@@ -22,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Email: $email\n
         Keep me anonymous: $keep_me_anonymous\n
         Mode: $mode\n
-        Institute Location: $institute_location\n
+        Level I teach: $level_you_teach\n
         How can we improve us?: $improve_us\n
         Rating: $rating\n";
         $headers = "From: $first_name $last_name <$email>\r\n";
@@ -42,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Email: $email\n
         Keep me anonymous: $keep_me_anonymous\n
         Mode: $mode\n
-        Institute Location: $institute_location\n
         Was the admission process smooth?: $process_smooth\n
         How can we improve us?: $improve_us\n
         Rating: $rating\n
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (mail($to, $subject, $email_content, $headers)) {
-        header("Location: thankyou.html");
+        header("Location: feedback-thankyou.html");
     } else {
         echo "Oops! Something went wrong. Please try again later.";
     }

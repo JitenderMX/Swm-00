@@ -45,22 +45,26 @@
         max-width: 30%;
         border-radius: 30px;
     }
+
     .course-box-1 .co-box,
     .course-box-2 .co-box,
-    .course-box-3 .co-box{
+    .course-box-3 .co-box {
         padding: 20px 20px 60px 20px;
     }
+
     .h2 {
         font-size: 70px;
         line-height: 110%;
     }
+
     .h1 .text-red {
         font-size: 64px;
     }
+
     .h2 .text-red {
         font-size: 45px;
     }
-   
+
 
     #home-hero img#flag {
         max-width: 120px;
@@ -92,6 +96,9 @@
 /* Medium devices (768px and down) */
 
 @media screen and (max-width: 768px) {
+    #header {
+        max-width:768px ;
+    }
     #blog-page #mainBlog .h3 {
         font-size: 40px;
     }
@@ -101,12 +108,13 @@
     }
 
     /* home page  */
-    .swiper-btn .fas{
+    .swiper-btn .fas {
         width: 40px;
         height: 40px;
         line-height: 40px;
         font-size: 18px;
     }
+
     .why-choose .bull-img {
         bottom: 20px;
         left: 0;
@@ -195,7 +203,7 @@
     .know-left p {
         margin-bottom: 20px;
     }
-    
+
     .h1 .text-red {
         font-size: 45px;
     }
@@ -204,7 +212,7 @@
         font-size: 55px;
     }
 
-       .h2 .text-red {
+    .h2 .text-red {
         font-size: 32px;
     }
 
@@ -218,7 +226,7 @@
     }
 
     .th-btn {
-        font-size: 30px;
+        font-size: 22px;
         padding: 10px 24px;
     }
 
@@ -282,9 +290,11 @@
     .osb-text {
         display: none;
     }
+
     .os-tab-box {
         padding: 20px;
     }
+
     .ost-h h5 {
         font-size: 24px;
     }
@@ -420,45 +430,60 @@
         border-radius: 0;
         padding: 10px;
     }
-    
-.fh-text {
-    color: var(--th-color-3);
-    font-family: var(--th-font-2);
-    font-size: 24px;
-    font-weight: 600;
-}
 
-.fh-icon {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 18px;
-    font-weight: 400;
-    transition: all .5s;
-    cursor: pointer;
-}
-.fh-text{
-    font-size: 18px;
-    font-weight: 100%;
-}
+    .fh-text {
+        color: var(--th-color-3);
+        font-family: var(--th-font-2);
+        font-size: 24px;
+        font-weight: 600;
+    }
 
-.faq-text {
-    color: var(--th-color-3);
-    font-family: var(--th-font-2);
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 200%;
-    /* 200% */
-    padding: 20px;
-}
+    .fh-icon {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 18px;
+        font-weight: 400;
+        transition: all .5s;
+        cursor: pointer;
+    }
 
+    .fh-text {
+        font-size: 18px;
+        font-weight: 100%;
+    }
+
+    .faq-text {
+        color: var(--th-color-3);
+        font-family: var(--th-font-2);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 200%;
+        /* 200% */
+        padding: 20px;
+    }
+    .contact-student .form-control,
+.contact-student .form-select,
+.contact-student .input-text,
+.contact-student input::placeholder {
+    font-size: 22px;
+    padding: 10px;
+}
+    .feedback-rating {
+        --star-rating-star-size: 3;
+    }
 }
 
 
 /* Small devices (576px and down) */
 
 @media screen and (max-width: 576px) {
-
+    #header {
+        max-width:576px ;
+    }
+    .th-btn {
+        font-size: 20px;
+    }
     .download-left,
     .download-right {
         height: auto !important;
@@ -536,9 +561,41 @@
 
     .c-course-box {
         padding: 20px;
-        /* transform: rotate(0deg) !important; */
         margin-top: 20px;
     }
+
+    #c-course-box-1 {
+        transform: rotate(0deg) translate(2000px, 0px);
+    }
+
+    #c-course-box-2 {
+        transform: rotate(0deg) translate(2000px, 0px);
+    }
+
+    #c-course-box-3 {
+        transform: rotate(0deg) translate(-2000px, 0px);
+    }
+
+    #c-course-box-4 {
+        transform: rotate(0deg) translate(-2000px, 0px);
+    }
+
+    #c-course-box-5 {
+        transform: rotate(0deg) translate(2000px, 0px);
+    }
+
+    #c-course-box-6 {
+        transform: rotate(0deg) translate(2000px, 0px);
+    }
+
+    #c-course-box-7 {
+        transform: rotate(0deg) translate(-2000px, 0px);
+    }
+
+    #c-course-box-8 {
+        transform: rotate(0deg) translate(-2000px, 0px);
+    }
+
 
     .contact-student .form-text-last {
         font-size: 34px;
@@ -552,7 +609,8 @@
     .service-animation {
         padding: 50px 0;
     }
-    .our-team{
+
+    .our-team {
         padding: 100px 0;
     }
 }
