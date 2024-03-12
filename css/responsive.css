@@ -484,6 +484,10 @@
     .th-btn {
         font-size: 20px;
     }
+    .whatsapp-btn{
+        width: 40px;
+        height: 40px;
+    }
     .download-left,
     .download-right {
         height: auto !important;
