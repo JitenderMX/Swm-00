@@ -135,6 +135,15 @@
         var swiper = new Swiper(".mySwiper", {
             effect: "cards",
             grabCursor: true,
+            // Optional parameters
+            loop: true,
+            autoplay: {
+                delay: 3000, // Autoplay delay in milliseconds
+            },
+            // If you need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
         });
         // jQuery code for navigation buttons
         $(document).ready(function () {
