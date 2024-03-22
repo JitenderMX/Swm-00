@@ -1545,8 +1545,8 @@ section.service {
 }
 
 .contact-student option {
-    background-color: var(--th-color-3) !important;
-    color: white !important;
+    /* background-color: var(--th-color-3) !important; */
+    /* color: white !important; */
 }
 
 .contact-student #step-1 {
