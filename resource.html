@@ -202,7 +202,7 @@
             </div>
             <div class="row justify-content-between" id="us-media-slider">
                 <div class="col-sm-6 col-md-4 mt-3 p-2">
-                    <div class="media-box">
+                    <div class="media-box shake">
                         <div class="media-h">
                             <i class="far fa-file-chart-line"></i>
                             <p>Media Report</p>
@@ -242,7 +242,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 mt-3 p-2">
-                    <div class="media-box">
+                    <div class="media-box shake">
                         <div class="media-h">
                             <i class="far fa-file-chart-line"></i>
                             <p>Media Report</p>
@@ -289,7 +289,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 mt-3 p-2">
-                    <div class="media-box">
+                    <div class="media-box shake">
                         <div class="media-h">
                             <i class="far fa-file-chart-line"></i>
                             <p>Media Report</p>
@@ -348,13 +348,24 @@
     <!-- Slick Js  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
+    <!-- ========== gsap Js ========== -->
+  <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
+
     <!-- ========== main Js ========== -->
     <script src="js/main.js"></script>
     <script>
+         $("#us-media-slider-2").slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
         function initializeAnimations() {
             var windowWidth = $(window).width();
             if (windowWidth <= 768) {
-                $("#us-media-slider, #us-media-slider-2").slick({
+                $("#us-media-slider").slick({
                     dots: true,
                     arrows: false,
                     infinite: true,
@@ -362,12 +373,34 @@
                     autoplaySpeed: 2000,
                 });
             } else {
-               
+
             }
         }
 
         // Call the function on page load
         initializeAnimations();
+    </script>
+    <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+         ScrollTrigger.create({
+          trigger: ".hero",
+          pin: ".hero",
+          pinSpacing: false,
+          scrub: true,
+          start: "top top",
+          end: () => `+=${document.querySelector(".hero").offsetHeight}`,
+        });
+        gsap.registerPlugin(ScrollTrigger);
+
+         ScrollTrigger.create({
+          trigger: ".us-media-resource",
+          pin: ".us-media-resource",
+          pinSpacing: false,
+          scrub: true,
+          start: "top top",
+          end: () => `+=${document.querySelector(".us-media-resource").offsetHeight}`,
+        });
     </script>
 </body>
 

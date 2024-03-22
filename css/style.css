@@ -118,7 +118,7 @@ a {
 }
 
 .h1 .text-aut {
-    padding-top: 22px;
+    /* padding-top: 22px; */
 }
 
 .h1 .text-red {
@@ -132,7 +132,7 @@ a {
 }
 
 .h2 .text-aut {
-    padding-top: 12px;
+    /* padding-top: 12px; */
 }
 
 .h2 .text-red {
@@ -140,12 +140,13 @@ a {
     padding: 8px;
     padding-bottom: 0;
 }
+
 .h3 {
     font-size: 44px;
 }
 
 .h3 .text-aut {
-    padding-top: 8px;
+    /* padding-top: 8px; */
 }
 
 .h3 .text-red {
@@ -158,14 +159,15 @@ a {
 }
 
 .h4 .text-aut {
-    padding-top: 4px;
+    /* padding-top: 4px; */
 }
 
 .h4 .text-red {
     padding: 4px;
     font-size: 20px;
 }
-.whatsapp-btn{
+
+.whatsapp-btn {
     width: 50px;
     height: 50px;
     position: fixed;
@@ -173,9 +175,11 @@ a {
     right: 20px;
     z-index: 200;
 }
-.whatsapp-btn img{
+
+.whatsapp-btn img {
     width: 100%;
 }
+
 .th-btn {
     background-color: var(--th-color-1);
     color: #FFF;
@@ -185,7 +189,7 @@ a {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 1.12px;
-    padding: 10px 40px;
+    padding: 4px 30px;
     cursor: pointer;
     /* display: inline-block !important; */
 }
@@ -753,7 +757,7 @@ footer .bg-black a:hover {
     max-width: 150px;
     position: absolute;
     top: 24%;
-    right: 24%;
+    right: 28%;
     transform: rotate(20deg) !important;
     z-index: -1;
 }
@@ -1072,7 +1076,7 @@ footer .bg-black a:hover {
 /* 15.Meet Our Team Section Start ------------------------------ */
 .our-team {
     padding: 200px 0 100px 0;
-    background: url(../image/our-team.png);
+    background: url(../image/about-hero.jpeg);
     background-attachment: fixed;
     background-position: top center;
     background-repeat: no-repeat;
@@ -1096,10 +1100,12 @@ footer .bg-black a:hover {
     background-color: var(--th-color-4);
     overflow: hidden !important;
 }
-.testimonal .slick-track{
+
+.testimonal .slick-track {
     overflow: hidden;
     z-index: 1;
 }
+
 .testimonal h2 {
     margin-bottom: 60px;
 }
@@ -1540,6 +1546,7 @@ section.service {
 
 .contact-student option {
     background-color: var(--th-color-3) !important;
+    color: white !important;
 }
 
 .contact-student #step-1 {
@@ -1671,6 +1678,18 @@ section.service {
     background: var(--th-color-2);
 }
 
+@keyframes shake {
+    0% { transform: translateX(0) rotate(-4deg); }
+    /* 25% { transform: translateX(-5px) rotate(-5deg); } */
+    50% { transform: translateX(5px) rotate(4deg); }
+    /* 75% { transform: translateX(-5px) rotate(-5deg); } */
+    100% { transform: translateX(0) rotate(-4deg); }
+  }
+
+.shake:hover {
+    animation: shake 0.5s ease-in-out 2;
+}
+
 /* ------------- Main Blog Section End ------------- */
 
 /* 23.Our Stars Section Start ------------------------------ */
@@ -1729,12 +1748,14 @@ section.service {
     max-width: 150px !important;
     /* margin: auto; */
 }
-.ost-img{
+
+.ost-img {
     max-width: 150px !important;
     width: 100%;
     margin: auto;
 }
-.ost-img img{
+
+.ost-img img {
     width: 100%;
 }
 
@@ -1828,6 +1849,7 @@ section.service {
     /* background-attachment: fixed; */
     background-size: cover;
 }
+
 #feedback-thankyou-page {
     height: 100vh;
     overflow: hidden;

@@ -245,7 +245,7 @@
                                         <div class="row justify-content-center">
                                             <div class="col-md-8">
                                                 <div class="input-text text-center">
-                                                    How can we improve us?
+                                                    Give us feedback
                                                 </div>
                                             </div>
                                             <div class="col-md-12 my-3">
@@ -410,7 +410,39 @@
                                                             NO
                                                         </label>
                                                     </div>
-                                                    <div class=""><button type="submit" class="th-btn d-none">Submit</button></div>
+                                                    <!-- <div class=""><button type="submit" class="th-btn d-none">Submit</button></div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback-s-13">
+                                <div class="row justify-content-center align-items-center step-slide">
+                                    <div class="col-11 col-md-8">
+                                        <div class="row justify-content-center">
+                                            <!-- <div class="col-md-8">
+                                                <div class="input-text text-center">
+                                                    Will your recommend our spanish courses to other students?
+                                                </div>
+                                            </div> -->
+                                            <div class="col-md-8 mt-3">
+                                                <div class="d-flex justify-content-center gap-4">
+                                                    <!-- <div class="">
+                                                        <input class="opacity-0 visually-hidden" name="recommend"
+                                                            value="YES" type="radio" id="recommend-1">
+                                                        <label class="th-btn" id="" for="recommend-1">
+                                                            YES
+                                                        </label>
+                                                    </div>
+                                                    <div class="">
+                                                        <input class="opacity-0 visually-hidden" name="recommend"
+                                                            value="NO" type="radio" id="recommend-2">
+                                                        <label class="th-btn" id="" for="recommend-2">
+                                                            NO
+                                                        </label>
+                                                    </div> -->
+                                                    <div class=""><button type="submit" class="th-btn">Submit</button></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -547,8 +579,8 @@
             $('.feedback-slider').slick('slickNext');
         });
         $('input[name="recommend"]').change(function () {
-            $('button[type="submit"]').removeClass("d-none");
-                // $('.feedback-slider').slick('slickNext');
+            // $('button[type="submit"]').removeClass("d-none");
+                $('.feedback-slider').slick('slickNext');
         });
     </script>
 </body>
