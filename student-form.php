@@ -141,11 +141,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query_name = $_POST["query-name"];
         $query_number = $_POST["query-number"];
         $query_email = $_POST["query-email"];
+        $query_city = $_POST["query-city"];
         $query_message = $_POST["query-message"];
 
         $to = "jitender.work.mediax@gmail.com";
         $subject = "New Query Form Submission";
-        $email_content = "Name: $query_name\nNumber: $query_number\nEmail: $query_email\nQuery: $query_message";
+        $email_content = "Name: $query_name\nNumber: $query_number\nEmail: $query_email\City: $query_city\nQuery: $query_message";
         $headers = "From: $query_name <$query_email>\r\n";
         $headers .= "Content-type: text/plain; charset=utf-8\r\n";
     } else {
