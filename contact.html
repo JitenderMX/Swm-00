@@ -424,8 +424,6 @@
                     </div>
                     <div class="col-md-6 px-md-4 mt-4 mt-md-5"><input type="text" name="applicant-profession" id=""
                         class="form-control" placeholder="Enter Profession"></div>
-
-
                     <div class="col-md-12 mt-4 mt-md-5 d-flex justify-content-center">
                       <div class="th-btn" id="step-1-check">
                         SUBMIT
@@ -653,6 +651,13 @@
                                 id="step-9-full">
                               <label class="th-btn" id="" for="step-9-full">
                                 FULL TIME
+                              </label>
+                            </div>
+                            <div class="">
+                              <input class="opacity-0 visually-hidden" name="time-type" value="Internship" type="radio"
+                                id="step-9-inter">
+                              <label class="th-btn" id="" for="step-9-inter">
+                                INTERNSHIP
                               </label>
                             </div>
                           </div>
@@ -947,6 +952,8 @@
       }
     })
   </script>
+
+  
   <script>
     // Contact Student
     $('.form-slider').slick({
@@ -954,9 +961,8 @@
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      swipe: true
+      swipe: false
     });
-
     $('#step-1-check').click(() => {
       // Validate each field
       // Full Name validation
@@ -1052,11 +1058,11 @@
       }
     });
     $('input[name="time-type"]').change(function () {
-      if ($(this).val() === 'Part-Time') {
-        $('.form-slider').slick('slickNext');
-      } else if ($(this).val() === 'Full-Time') {
-        $('.form-slider').slick('slickNext');
-      }
+      $('.form-slider').slick('slickNext');
+      // if ($(this).val() === 'Part-Time') {
+      // } else if ($(this).val() === 'Full-Time') {
+      //   $('.form-slider').slick('slickNext');
+      // }
     });
 
     $('input[name="dele-certified"]').change(function () {
@@ -1086,7 +1092,7 @@
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      swipe: true
+      swipe: false
     });
     $('input[name="have-query"]').change(function () {
       if ($(this).val() === 'yes') {
