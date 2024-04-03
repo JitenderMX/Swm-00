@@ -1,140 +1,4 @@
 <?php
-/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$student_name = $_POST["student-name"];
-$student_city = $_POST["student-city"];
-$student_dob = $_POST["student-dob"];
-$student_profession = $_POST["student-profession"];
-$student_address = $_POST["student-address"];
-$second_q = $_POST["second-q"];
-$student_institute = $_POST["student-institute"];
-$student_level = $_POST["student-level"];
-$student_number = $_POST["student-number"];
-$student_email = $_POST["student-email"];
-$student_education = $_POST["student-education"];
-$student_query = $_POST["student-query"];
-
-    
-    // // Validate input (you can add more validation if required)
-    // if (empty($name) || empty($email) || empty($phone) || empty($message)) {
-    //     echo "Please fill in all the fields.";
-    //     exit;
-    // }
-    
-    // Set the recipient email address
-    $to = "jitender.work.mediax@gmail.com";
-    
-    // Set the email subject
-    $subject = "New Student Form Submission";
-    
-    // Build the email content
-    $email_content = `Name : $student_name \n
-    City: $student_city \n
-    DOB: $student_dob \n
-    Profession: $student_profession \n
-    Address: $student_address \n
-    HAVE YOU STUDIED SPANISH BEFORE? : $second_q \n
-    SELECT INSTITUTE : $student_institute \n
-    SELECT LEVEL : $student_level \n
-    Number: $student_number \n
-    Email : $student_email \n
-    Education : $student_education \n
-    Query : $student_query`;
-    
-    // Set the email headers
-    $headers = "From: $name <$email>\r\n";
-    
-    // Send the email
-    if (mail($to, $subject, $email_content, $headers)) {
-        echo "Thank you for contacting us. We'll get back to you shortly.";
-        header("Location: thankyou.html");
-
-    } else {
-        echo "Oops! Something went wrong. Please try again later.";
-    }
-}*/
-?>
-<?php
-/* if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assigning values from $_POST to variables
-   
-
-    // Validate input (you can add more validation if required)
-    if ($have_query === "yes") {
-        $query_name = $_POST["query-name"];
-        $query_number = $_POST["query-number"];
-        $query_email = $_POST["query-email"];
-        $query_message = $_POST["query-message"];
-
-        // Set the recipient email address
-        $to = "jitender.work.mediax@gmail.com";
-
-        // Set the email subject
-        $subject = "New Student Form Submission";
-
-        // Build the email content
-        $email_content = "Name: $query_name\n
-        Number: $query_number\n
-        Email: $query_email\n
-        Query: $query_message";
-
-        // Set the email headers
-        $headers = "From: $query_name <$query_email>\r\n";
-        // $headers .= "Reply-To: $student_email\r\n";
-        $headers .= "Content-type: text/plain; charset=utf-8\r\n";
-    }else{
-        $student_name = $_POST["student-name"];
-        $student_city = $_POST["student-city"];
-        $student_dob = $_POST["student-dob"];
-        $student_profession = $_POST["student-profession"];
-        $student_address = $_POST["student-address"];
-        $second_q = $_POST["second-q"];
-        $student_institute = $_POST["student-institute"];
-        $student_level = $_POST["student-level"];
-        $student_number = $_POST["student-number"];
-        $student_email = $_POST["student-email"];
-        $student_education = $_POST["student-education"];
-        $student_query = $_POST["student-query"];
-
-        // Set the recipient email address
-        $to = "jitender.work.mediax@gmail.com";
-
-        // Set the email subject
-        $subject = "New Student Form Submission";
-
-        // Build the email content
-        $email_content = "Name: $student_name\n
-        City: $student_city\n
-        DOB: $student_dob\n
-        Profession: $student_profession\n
-        Address: $student_address\n
-        HAVE YOU STUDIED SPANISH BEFORE?: $second_q\n
-        SELECT INSTITUTE: $student_institute\n
-        SELECT LEVEL: $student_level\n
-        Number: $student_number\n
-        Email: $student_email\n
-        Education: $student_education\n
-        Query: $student_query";
-
-        // Set the email headers
-        $headers = "From: $student_name <$student_email>\r\n";
-        // $headers .= "Reply-To: $student_email\r\n";
-        $headers .= "Content-type: text/plain; charset=utf-8\r\n";
-    }
-
-    
-
-  
-
-    // Send the email
-    if (mail($to, $subject, $email_content, $headers)) {
-        // echo "Thank you for contacting us. We'll get back to you shortly.";
-        header("Location: thankyou.html");
-    } else {
-        echo "Oops! Something went wrong. Please try again later.";
-    }
-} */
-?>
-<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["have-query"]) && $_POST["have-query"] === "yes") {
         // Process query form submission
@@ -146,9 +10,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $to = "jitender.work.mediax@gmail.com";
         $subject = "New Query Form Submission";
-        $email_content = "Name: $query_name\nNumber: $query_number\nEmail: $query_email\City: $query_city\nQuery: $query_message";
+        $email_content = "Name: $query_name\nNumber: $query_number\nEmail: $query_email\nCity: $query_city\nQuery: $query_message";
         $headers = "From: $query_name <$query_email>\r\n";
         $headers .= "Content-type: text/plain; charset=utf-8\r\n";
+       
+        if (mail($to, $subject, $email_content, $headers)) {
+            header("Location: thankyou.html");
+        } else {
+            echo "Oops! Something went wrong. Please try again later.";
+        }
+
     } else {
         // Process student form submission
         $student_name = $_POST["student-name"];
@@ -162,19 +33,63 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $student_number = $_POST["student-number"];
         $student_email = $_POST["student-email"];
         $student_education = $_POST["student-education"];
-        $student_query = $_POST["student-query"];
-
+        $student_fee_paid = $_POST["fee-paid"];
+        $student_enrollment_level = $_POST["student-enrollment-level"];
+        $student_where_you_hear = $_POST["where-you-hear-student"];
+        
         $to = "jitender.work.mediax@gmail.com";
         $subject = "New Student Form Submission";
-        $email_content = "Name: $student_name\nCity: $student_city\nDOB: $student_dob\nProfession: $student_profession\nAddress: $student_address\nHAVE YOU STUDIED SPANISH BEFORE?: $second_q\nSELECT INSTITUTE: $student_institute\nSELECT LEVEL: $student_level\nNumber: $student_number\nEmail: $student_email\nEducation: $student_education\nQuery: $student_query";
+        $email_content = "Name: $student_name\nCity: $student_city\nDOB: $student_dob\nProfession: $student_profession\nAddress: $student_address\nHAVE YOU STUDIED SPANISH BEFORE?: $second_q\nSELECT INSTITUTE: $student_institute\nSELECT LEVEL: $student_level\nNumber: $student_number\nEmail: $student_email\nEducation: $student_education\nFee Paid: $student_fee_paid\nStudent Enrollment Level: $student_enrollment_level\nStudent Where You Hear: $student_where_you_hear\nQuery: $student_query";
         $headers = "From: $student_name <$student_email>\r\n";
         $headers .= "Content-type: text/plain; charset=utf-8\r\n";
+        // File upload handling
+    if (isset($_FILES['aadhar-student-upload'])) {
+        $file = $_FILES['aadhar-student-upload'];
+        $fileName = $file['name'];
+        $fileTmpName = $file['tmp_name'];
+        $fileSize = $file['size'];
+        $fileError = $file['error'];
+        
+        // Check if file was uploaded without errors
+        if ($fileError === 0) {
+            // Attach the file to the email
+            $boundary = md5(rand());
+            $headers = "From: $student_email\r\n";
+            $headers .= "Reply-To: $student_email\r\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
+            
+            // Add text data to the message
+            $body = "--$boundary\r\n";
+            $body .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
+            $body .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+            $body .= $email_content . "\r\n";
+            
+            // Add attachment
+            $body .= "--$boundary\r\n";
+            $body .= "Content-Type: application/pdf; name=\"$fileName\"\r\n";
+            $body .= "Content-Disposition: attachment; filename=\"$fileName\"\r\n";
+            $body .= "Content-Transfer-Encoding: base64\r\n";
+            $body .= "X-Attachment-Id: " . rand(1000, 99999) . "\r\n\r\n";
+            $body .= chunk_split(base64_encode(file_get_contents($fileTmpName))) . "\r\n";
+            $body .= "--$boundary--";
+
+            // Send the email
+            if (mail($to, $subject, $body, $headers)) {
+                header("Location: thankyou.html");
+                exit;
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+        } else {
+            echo "Error uploading file.";
+        }
+    } else {
+        echo "No file uploaded.";
+    }
+    header("Location: thankyou.html");
     }
 
-    if (mail($to, $subject, $email_content, $headers)) {
-        header("Location: thankyou.html");
-    } else {
-        echo "Oops! Something went wrong. Please try again later.";
-    }
+    
 }
 ?>

@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="col-12">
-          <form action="student-form.php" method="post">
+          <form action="student-form.php" enctype="multipart/form-data" method="post">
             <div id="sf-slider">
               <div class="">
                 <div class="row justify-content-center align-items-center step-slide">
@@ -104,7 +104,7 @@
                     <input type="number" name="query-number" id="" class="form-control" placeholder="Enter Phone No.">
                   </div>
                   <div class="col-md-6 px-md-4 mt-4 mt-md-5">
-                    <input type="text" name="query-email" id="" class="form-control" placeholder="Enter Email">
+                    <input type="email" name="query-email" id="" class="form-control" placeholder="Enter Email">
                   </div>
                   <div class="col-md-6 px-md-4 mt-4 mt-md-5">
                     <select id="query-city" name="query-city" class="form-select">
@@ -261,7 +261,7 @@
                   </div>
                 </div>
               </div>
-              <div class="">
+              <div class="file-aadhar-upload">
                 <div class="row justify-content-center align-items-center step-slide">
                   <div class="col-md-12">
                     <div class="row justify-content-center">
@@ -271,7 +271,7 @@
                       </div>
                       <div class="col-8 my-4">
                         <input type="file" class="form-control" name="aadhar-student-upload" id="aadhar-student-upload"
-                          accept=".pdf,.doc,.docx,.jpg,.png,.jpeg,.webp" required>
+                          accept=".pdf,.doc,.docx,.jpg,.png,.jpeg,.webp">
                       </div>
                       <div class="col-md-12 mt-4 mt-md-5 d-flex justify-content-center">
                         <div class="th-btn" id="aadhar-student-upload-check">
@@ -323,7 +323,7 @@
                     <input type="number" name="student-number" id="" class="form-control" placeholder="Enter Phone No.">
                   </div>
                   <div class="col-md-6 px-md-4 mt-4 mt-md-5">
-                    <input type="text" name="student-email" id="" class="form-control" placeholder="Enter Email">
+                    <input type="email" name="student-email" id="" class="form-control" placeholder="Enter Email">
                   </div>
                   <div class="col-md-12 px-md-4 mt-4 mt-md-5">
                     <input type="text" name="student-education" id="" class="form-control"
@@ -340,23 +340,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="">
-                <div class="row step-slide align-items-center">
-                  <div class="col-6">
-                    <div class="form-img mx-auto">
-                      <img src="image/form-img.png" alt="">
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="form-text-last">
-                      <span class="last-1">YOUR DETAILS HAVE BEEN </span>
-                      <span class="last-2"> SUBMITTED! </span>
-                      <span class="last-3"> LET’S BEGIN THE </span>
-                      <span class="last-4"> HEIST! </span>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
               <div class="">
                 <div class="row justify-content-center align-items-center step-slide">
                   <div class="col-md-12">
@@ -399,6 +382,47 @@
           <div class="col-12">
             <form action="career-form.php" enctype="multipart/form-data" method="post">
               <div class="form-slider">
+                <div class="career-step-9">
+                  <div class="row justify-content-center align-items-center step-slide">
+                    <div class="col-md-12">
+                      <div class="row justify-content-center">
+                        <div class="col-10">
+                          <div class="input-text text-center">DO YOU WANT TO JOIN?
+                          </div>
+                        </div>
+                        <!-- <div class="col-8 my-4">
+                                            <input type="text" name="" id="have-you-study" class="form-control"
+                                                placeholder="Enter Full Name">
+                                        </div> -->
+                        <div class="col-8 mt-3">
+                          <div class="d-flex justify-content-center gap-4">
+                            <div class="">
+                              <input class="opacity-0 visually-hidden" name="time-type" value="Part-Time" type="radio"
+                                id="step-9-part">
+                              <label class="th-btn" id="" for="step-9-part">
+                                PART TIME
+                              </label>
+                            </div>
+                            <div class="">
+                              <input class="opacity-0 visually-hidden" name="time-type" value="Full-Time" type="radio"
+                                id="step-9-full">
+                              <label class="th-btn" id="" for="step-9-full">
+                                FULL TIME
+                              </label>
+                            </div>
+                            <div class="">
+                              <input class="opacity-0 visually-hidden" name="time-type" value="Internship" type="radio"
+                                id="step-9-inter">
+                              <label class="th-btn" id="" for="step-9-inter">
+                                INTERNSHIP
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="career-step-1">
                   <div class="row justify-content-center align-items-center step-slide">
                     <div class="col-md-6 px-md-4 mt-4 mt-md-5">
@@ -625,7 +649,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="career-step-9">
+                <!-- <div class="career-step-9">
                   <div class="row justify-content-center align-items-center step-slide">
                     <div class="col-md-12">
                       <div class="row justify-content-center">
@@ -633,10 +657,6 @@
                           <div class="input-text text-center">DO YOU WANT TO JOIN?
                           </div>
                         </div>
-                        <!-- <div class="col-8 my-4">
-                                            <input type="text" name="" id="have-you-study" class="form-control"
-                                                placeholder="Enter Full Name">
-                                        </div> -->
                         <div class="col-8 mt-3">
                           <div class="d-flex justify-content-center gap-4">
                             <div class="">
@@ -665,13 +685,13 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="career-step-10">
                   <div class="row justify-content-center align-items-center step-slide">
                     <div class="col-md-12">
                       <div class="row justify-content-center">
                         <div class="col-10">
-                          <div class="input-text text-center">Upload Your Aadhar Card
+                          <div class="input-text text-center">Upload Your CV
                           </div>
                         </div>
                         <div class="col-8 my-4">
@@ -953,7 +973,7 @@
     })
   </script>
 
-  
+
   <script>
     // Contact Student
     $('.form-slider').slick({
@@ -1059,10 +1079,6 @@
     });
     $('input[name="time-type"]').change(function () {
       $('.form-slider').slick('slickNext');
-      // if ($(this).val() === 'Part-Time') {
-      // } else if ($(this).val() === 'Full-Time') {
-      //   $('.form-slider').slick('slickNext');
-      // }
     });
 
     $('input[name="dele-certified"]').change(function () {
@@ -1207,6 +1223,14 @@
       $('#sf-slider').slick('slickNext');
     })
     $('#aadhar-student-upload-check').click(function () {
+
+      var fileInput = $('#aadhar-student-upload');
+
+      // Check if a file is selected
+      if (fileInput.get(0).files.length === 0) {
+        alert("No file uploaded!");
+        return false;
+      }
       $('#sf-slider').slick('slickNext');
     });
     $("#step-4-check-s").click(() => {
@@ -1227,6 +1251,12 @@
         return false;
       }
       $('#sf-slider').slick('slickNext');
+    })
+    $("#where-you-hear-student-check").click(() => {
+      if ($('[name="where-you-hear-student"]').val() === "") {
+        alert("Please Enter Where You Heard About Us");
+        return false;
+      }
     })
   </script>
 

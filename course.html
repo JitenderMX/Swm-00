@@ -54,7 +54,10 @@
         <div class="container-xxl">
             <div class="row">
                 <div class="col-12">
-                    <div class="h2"><div class="text-red">OUR</div><div class="text-aut">COURSES</div></div>
+                    <div class="h2">
+                        <div class="text-red">OUR</div>
+                        <div class="text-aut">COURSES</div>
+                    </div>
                 </div>
                 <div class="col-12">
                     <div class="c-course">
@@ -145,8 +148,8 @@
                 <div class="col-sm-6 col-md-3 pt-md-4">
                     <div class="h3">
                         <div class="text-red">Rs. 13,999</div>
-                     <div class="w-100"></div>
-                       <div class="text-aut"> Private Sessions</div>
+                        <div class="w-100"></div>
+                        <div class="text-aut"> Private Sessions</div>
                     </div>
                     <p>
                         Experience 40 hours of personalized learning in our private sessions, tailored just for you.
@@ -179,7 +182,9 @@
                             9999. Tailored preparation for confident exam performance. Elevate your language proficiency
                             and achieve your DELE goals with our specialized program.</p>
                     </div>
-                    <div class="h3"><div class="text-aut">available separately for</div><span class="text-red">Rs. 9999</span></div>
+                    <div class="h3">
+                        <div class="text-aut">available separately for</div><span class="text-red">Rs. 9999</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -269,11 +274,14 @@
         <div class="container-xxl">
             <div class="row">
                 <div class="col-12">
-                    <div class="h2 text-white"><div class="text-aut">ENROLL</div> <div class="text-red">NOW</div></div>
+                    <div class="h2 text-white">
+                        <div class="text-aut">ENROLL</div>
+                        <div class="text-red">NOW</div>
+                    </div>
                 </div>
                 <div class="col-12">
-                    <form action="student-form.php" method="post">
-                        <div class="form-slider">
+                    <form action="student-form.php" enctype="multipart/form-data" method="post">
+                        <div id="sf-slider">
                             <div class="">
                                 <div class="row justify-content-center align-items-center step-slide">
                                     <div class="col-md-12">
@@ -315,11 +323,22 @@
                                         <input type="number" name="query-number" id="" class="form-control"
                                             placeholder="Enter Phone No.">
                                     </div>
-                                    <div class="col-md-12 px-md-4 mt-4 mt-md-5">
-                                        <input type="text" name="query-email" id="" class="form-control" placeholder="Enter Email">
+                                    <div class="col-md-6 px-md-4 mt-4 mt-md-5">
+                                        <input type="email" name="query-email" id="" class="form-control"
+                                            placeholder="Enter Email">
+                                    </div>
+                                    <div class="col-md-6 px-md-4 mt-4 mt-md-5">
+                                        <select id="query-city" name="query-city" class="form-select">
+                                            <option value="city" selected>City...</option>
+                                            <option value="Agra">Agra</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Ahemdabad">Ahemdabad</option>
+                                            <option value="Chandigarh">Chandigarh</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-12 px-md-4 mt-4 mt-md-5">
-                                        <input type="text" name="query-message" id="" class="form-control" placeholder="Query">
+                                        <input type="text" name="query-message" id="" class="form-control"
+                                            placeholder="Query">
                                     </div>
                                     <div class="col-md-12 mt-4 mt-md-5 d-flex justify-content-center">
                                         <button class="th-btn" id="query-check">
@@ -328,7 +347,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
                             <div class="">
                                 <div class="row justify-content-center align-items-center step-slide">
                                     <div class="col-md-6 px-md-4 mt-4 mt-md-5">
@@ -369,22 +387,22 @@
                                                 </div>
                                             </div>
                                             <!-- <div class="col-8 my-4">
-                                                <input type="text" name="" id="have-you-study" class="form-control"
-                                                    placeholder="Enter Full Name">
-                                            </div> -->
+                                                            <input type="text" name="" id="have-you-study" class="form-control"
+                                                                placeholder="Enter Full Name">
+                                                        </div> -->
                                             <div class="col-md-8">
                                                 <div class="d-flex justify-content-center gap-4">
                                                     <div class="">
                                                         <input class="opacity-0 visually-hidden" name="second-q"
-                                                            value="yes" type="radio" id="step-2-yes">
-                                                        <label class="th-btn" id="" for="step-2-yes">
+                                                            value="yes" type="radio" id="step-2-yes-s">
+                                                        <label class="th-btn" id="" for="step-2-yes-s">
                                                             YES
                                                         </label>
                                                     </div>
                                                     <div class="">
                                                         <input class="opacity-0 visually-hidden" name="second-q"
-                                                            value="no" type="radio" id="step-2-no">
-                                                        <label class="th-btn" id="" for="step-2-no">
+                                                            value="no" type="radio" id="step-2-no-s">
+                                                        <label class="th-btn" id="" for="step-2-no-s">
                                                             NO
                                                         </label>
                                                     </div>
@@ -447,12 +465,95 @@
                             </div>
                             <div class="">
                                 <div class="row justify-content-center align-items-center step-slide">
+                                    <div class="col-8">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-12 px-md-4 mt-4 mt-md-5">
+                                                <select id="student-enrollment-level" name="student-enrollment-level"
+                                                    class="form-select">
+                                                    <option value="select-enrollment-level" selected>SELECT ENROLLMENT
+                                                        LEVEL</option>
+                                                    <option value="A1">A1</option>
+                                                    <option value="A2">A2</option>
+                                                    <option value="B1">B1</option>
+                                                    <option value="B2">B2</option>
+                                                    <option value="C1">C1</option>
+                                                    <option value="C2">C2</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-12 mt-4 mt-md-5 d-flex justify-content-center">
+                                                <div class="th-btn" id="step-enrollment-check-s">
+                                                    SUBMIT
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="file-aadhar-upload">
+                                <div class="row justify-content-center align-items-center step-slide">
+                                    <div class="col-md-12">
+                                        <div class="row justify-content-center">
+                                            <div class="col-10">
+                                                <div class="input-text text-center">Upload Your Aadhar Card
+                                                </div>
+                                            </div>
+                                            <div class="col-8 my-4">
+                                                <input type="file" class="form-control" name="aadhar-student-upload"
+                                                    id="aadhar-student-upload"
+                                                    accept=".pdf,.doc,.docx,.jpg,.png,.jpeg,.webp">
+                                            </div>
+                                            <div class="col-md-12 mt-4 mt-md-5 d-flex justify-content-center">
+                                                <div class="th-btn" id="aadhar-student-upload-check">
+                                                    SUBMIT
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="career-step-4">
+                                <div class="row justify-content-center align-items-center step-slide">
+                                    <div class="col-md-12">
+                                        <div class="row justify-content-center">
+                                            <div class="col-10">
+                                                <div class="input-text text-center">HAVE YOU PAID FEES?
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-8 my-4">
+                                                      <input type="text" name="" id="have-you-study" class="form-control"
+                                                          placeholder="Enter Full Name">
+                                                  </div> -->
+                                            <div class="col-8 mt-3">
+                                                <div class="d-flex justify-content-center gap-4">
+                                                    <div class="">
+                                                        <input class="opacity-0 visually-hidden" name="fee-paid"
+                                                            value="yes" type="radio" id="fee-paid-yes">
+                                                        <label class="th-btn" id="" for="fee-paid-yes">
+                                                            YES
+                                                        </label>
+                                                    </div>
+                                                    <div class="">
+                                                        <input class="opacity-0 visually-hidden" name="fee-paid"
+                                                            value="no" type="radio" id="fee-paid-no">
+                                                        <label class="th-btn" id="" for="fee-paid-no">
+                                                            NO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="row justify-content-center align-items-center step-slide">
                                     <div class="col-md-6 px-md-4 mt-4 mt-md-5">
                                         <input type="number" name="student-number" id="" class="form-control"
                                             placeholder="Enter Phone No.">
                                     </div>
                                     <div class="col-md-6 px-md-4 mt-4 mt-md-5">
-                                        <input type="text" name="student-email" id="" class="form-control"
+                                        <input type="email" name="student-email" id="" class="form-control"
                                             placeholder="Enter Email">
                                     </div>
                                     <div class="col-md-12 px-md-4 mt-4 mt-md-5">
@@ -464,25 +565,30 @@
                                             placeholder="Ask Query (If have any)">
                                     </div>
                                     <div class="col-md-12 mt-4 mt-md-5 d-flex justify-content-center">
-                                        <button type="submit" class="th-btn" id="step-4-check-s">
+                                        <div class="th-btn" id="step-4-check-s">
                                             SUBMIT
-                                        </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="">
-                                <div class="row step-slide align-items-center">
-                                    <div class="col-6">
-                                        <div class="form-img mx-auto">
-                                            <img src="image/form-img.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-text-last">
-                                            <span class="last-1">YOUR DETAILS HAVE BEEN </span>
-                                            <span class="last-2"> SUBMITTED! </span>
-                                            <span class="last-3"> LET’S BEGIN THE </span>
-                                            <span class="last-4"> HEIST! </span>
+                                <div class="row justify-content-center align-items-center step-slide">
+                                    <div class="col-md-12">
+                                        <div class="row justify-content-center">
+                                            <div class="col-10">
+                                                <div class="input-text text-center">From where did you get to know about
+                                                    our institute?
+                                                </div>
+                                            </div>
+                                            <div class="col-8 my-4">
+                                                <input type="text" name="where-you-hear-student"
+                                                    id="where-you-hear-student" class="form-control">
+                                            </div>
+                                            <div class="col-md-12 mt-4 mt-md-5 d-flex justify-content-center">
+                                                <button class="th-btn" id="where-you-hear-student-check">
+                                                    SUBMIT
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -572,7 +678,164 @@
         });
     </script>
     <script>
-          $('input[name="have-query"]').change(function () {
+        $('#sf-slider').slick({
+          infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          swipe: false
+        });
+        $('input[name="have-query"]').change(function () {
+          if ($(this).val() === 'yes') {
+            $('#sf-slider').slick('slickNext');
+          } else {
+            $('.contact-student-query').addClass("d-none");
+            $('#sf-slider').slick('slickNext');
+          }
+        });
+        $('#query-check').click(() => {
+          // Validate each field
+    
+          // Full Name validation
+          if ($('input[name="query-name"]').val() === "") {
+            alert("Please Enter Full Name");
+            return false;
+          }
+    
+          // Date of Birth validation
+          else if ($('input[name="query-number"]').val() === "") {
+            alert("Please Enter Valid Phone Number");
+            return false;
+          }
+    
+          // Profession validation
+          else if ($('input[name="query-email"]').val() === "") {
+            alert("Please Enter Vaild Email");
+            return false;
+          }
+          else if ($('[name="query-city"]').val() === "city") {
+            alert("Please Select Your City");
+            return false;
+          }
+    
+          // Address validation
+          else if ($('input[name="query-message"]').val() === "") {
+            alert("Please Enter Your Query");
+            return false;
+          }
+        });
+        $('#step-1-check-s').click(() => {
+          // Validate each field
+    
+          // Full Name validation
+          if ($('input[name="student-name"]').val() === "") {
+            alert("Please Enter Full Name");
+            return false;
+          }
+    
+          // City validation
+          else if ($('input[name="student-city"]').val() === "city") {
+            alert("Please Select a City");
+            return false;
+          }
+    
+          // Date of Birth validation
+          else if ($('input[name="student-dob"]').val() === "") {
+            alert("Please Enter Date of Birth");
+            return false;
+          }
+    
+          // Profession validation
+          else if ($('input[name="student-profession"]').val() === "") {
+            alert("Please Enter Profession");
+            return false;
+          }
+    
+          // Address validation
+          else if ($('input[name="student-address"]').val() === "") {
+            alert("Please Enter Address");
+            return false;
+          }
+    
+          // // If all fields are valid, submit the form
+          // if (isValid) {
+          //     alert("Form submitted successfully!");
+          //     // Uncomment the following line to submit the form
+          //     // $("#myForm").submit();
+          // }
+          $('#sf-slider').slick('slickNext');
+        });
+        $('input[name="second-q"]').change(function () {
+          if ($(this).val() === 'yes') {
+            $('#sf-slider').slick('slickNext');
+          } else {
+            $('.contact-student-3').addClass("d-none");
+            $('#sf-slider').slick('slickNext');
+          }
+        });
+        $('[name="fee-paid"]').change(function () {
+          $('#sf-slider').slick('slickNext');
+        });
+        $('#step-2-check-s').click(function () {
+          $('#sf-slider').slick('slickNext');
+        });
+        $("#step-3-check-s").click(() => {
+          if ($('#student-institute').val() === "select-institute") {
+            alert("Please Select a Institute");
+            return false;
+          }
+          else if ($('#student-level').val() === "select-level") {
+            alert("Please Select a Level");
+            return false;
+          }
+          $('#sf-slider').slick('slickNext');
+        })
+        $("#step-enrollment-check-s").click(() => {
+          if ($('#student-enrollment-level').val() === "select-enrollment-level") {
+            alert("Please Select a Enrollment Level");
+            return false;
+          }
+          $('#sf-slider').slick('slickNext');
+        })
+        $('#aadhar-student-upload-check').click(function () {
+    
+          var fileInput = $('#aadhar-student-upload');
+    
+          // Check if a file is selected
+          if (fileInput.get(0).files.length === 0) {
+            alert("No file uploaded!");
+            return false;
+          }
+          $('#sf-slider').slick('slickNext');
+        });
+        $("#step-4-check-s").click(() => {
+          if ($('input[name="student-number"]').val() === "") {
+            alert("Please Enter Phone Number");
+            return false;
+          }
+          else if ($('input[name="student-email"]').val() === "") {
+            alert("Please Enter Your Correct Email");
+            return false;
+          }
+          else if ($('input[name="student-education"]').val() === "") {
+            alert("Please Enter Education");
+            return false;
+          }
+          else if ($('input[name="student-query"]').val() === "") {
+            alert("Please Enter Query");
+            return false;
+          }
+          $('#sf-slider').slick('slickNext');
+        })
+        $("#where-you-hear-student-check").click(() => {
+          if ($('[name="where-you-hear-student"]').val() === "") {
+            alert("Please Enter Where You Heard About Us");
+            return false;
+          }
+        })
+      </script>
+    <!-- <script>
+        $('input[name="have-query"]').change(function () {
             if ($(this).val() === 'yes') {
                 $('.form-slider').slick('slickNext');
             } else {
@@ -689,7 +952,7 @@
             }
             // $('.form-slider').slick('slickNext');
         })
-    </script>
+    </script> -->
     <script>
         function initializeAnimations() {
             var windowWidth = $(window).width();
