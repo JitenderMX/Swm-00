@@ -463,9 +463,13 @@ ul {
     /* gap: 20px; */
 }
 
+.we-are-head .siele {
+    width: 100%;
+    max-width: 100px;
+}
 .we-are-head .certifide {
     width: 100%;
-    max-width: 200px;
+    max-width: 100px;
 }
 
 .we-are-pera {
@@ -1252,6 +1256,13 @@ section.service {
     transform: skewY(-3deg);
 
 }
+.sa-img{
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
 
 /* .service-animation::after{
     content: " ";

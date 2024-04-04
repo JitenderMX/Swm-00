@@ -99,6 +99,9 @@
     #header {
         max-width:768px ;
     }
+    .sa-img{
+        max-width: 300px;
+    }
     #blog-page #mainBlog .h3 {
         font-size: 40px;
     }
@@ -481,6 +484,7 @@
     #header {
         max-width:576px ;
     }
+    
     .th-btn {
         font-size: 20px;
     }
