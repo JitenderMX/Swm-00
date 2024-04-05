@@ -803,6 +803,7 @@ footer .bg-black a:hover {
     border-radius: 30px;
     position: relative;
     z-index: 1;
+    text-align: center;
     transition: all .5s;
 }
 
@@ -1079,23 +1080,28 @@ footer .bg-black a:hover {
 
 /* 15.Meet Our Team Section Start ------------------------------ */
 .our-team {
-    padding: 200px 0 100px 0;
-    background: url(../image/about-hero.jpeg);
+    padding: 100px 0 100px 0;
+    background-color: var(--th-color-4);
+ /*    background: url(../image/about-hero.jpeg);
     background-attachment: fixed;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .our-team .h2 {
-    color: var(--th-color-2);
+    color: var(--th-color-3);
 }
 
 .our-team p {
-    color: #fff;
+    /* color: #fff; */
     margin: 30px 0;
 }
-
+.ot-img{
+    width: 100%;
+    margin: auto;
+    max-width: 450px;
+}
 /* ------------- Meet Our Team Section End ------------- */
 
 /* 16.Testimonal Section Start ------------------------------ */
@@ -1336,6 +1342,7 @@ section.service {
     border-radius: 30px;
     padding: 40px 40px 60px 40px;
     position: relative;
+    text-align: center;
     transition: all .5s;
     z-index: auto;
 }
@@ -1530,6 +1537,11 @@ section.service {
 
 .spanish-text {
     padding: 80px 0;
+}
+.spanish-text .th-btn{
+font-size: 18px;
+font-family: var(--th-font-2);
+padding: 4px 14px;
 }
 
 /* 21.Contact Form Section Start ------------------------------ */
