@@ -11,7 +11,7 @@ $(window).on("load", function () {
             arrows: true,
             infinite: true,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 1500,
             centerMode: true,
             responsive: [
                 {
