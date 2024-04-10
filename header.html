@@ -79,3 +79,15 @@
       }
   });
 </script>
+<script>
+   // Function to handle scroll event
+   $(window).scroll(function(){
+    var scrollTop = $(this).scrollTop();
+    // If scroll top is greater than 1px, add class 'scrolled', else remove it
+    if (scrollTop > 1) {
+      $('.header').addClass('scrolled');
+    } else {
+      $('.header').removeClass('scrolled');
+    }
+  });
+</script>

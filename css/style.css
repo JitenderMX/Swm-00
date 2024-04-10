@@ -270,6 +270,12 @@ ul {
     align-items: center;
     padding: 20px 30px;
 }
+.header{
+    transition: all .5s;
+}
+.header.scrolled{
+    background-color: #000;
+}
 
 .nav .nav-logo {
     max-width: 70px;
@@ -1726,7 +1732,7 @@ padding: 4px 14px;
 
 .os-btn-box {
     height: 718px;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     padding-right: 10px;
 }
 
