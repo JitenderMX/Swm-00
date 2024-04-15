@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query_city = $_POST["query-city"];
         $query_message = $_POST["query-message"];
 
-        $to = "jitender.work.mediax@gmail.com";
+        $to = "info@spanishwithmrityunjay.in";
         $subject = "New Query Form Submission";
         $email_content = "Name: $query_name\nNumber: $query_number\nEmail: $query_email\nCity: $query_city\nQuery: $query_message";
         $headers = "From: $query_name <$query_email>\r\n";
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $student_enrollment_level = $_POST["student-enrollment-level"];
         $student_where_you_hear = $_POST["where-you-hear-student"];
         
-        $to = "jitender.work.mediax@gmail.com";
+        $to = "info@spanishwithmrityunjay.in";
         $subject = "New Student Form Submission";
         $email_content = "Name: $student_name\nCity: $student_city\nDOB: $student_dob\nProfession: $student_profession\nAddress: $student_address\nHAVE YOU STUDIED SPANISH BEFORE?: $second_q\nSELECT INSTITUTE: $student_institute\nSELECT LEVEL: $student_level\nNumber: $student_number\nEmail: $student_email\nEducation: $student_education\nFee Paid: $student_fee_paid\nStudent Enrollment Level: $student_enrollment_level\nStudent Where You Hear: $student_where_you_hear\nQuery: $student_query";
         $headers = "From: $student_name <$student_email>\r\n";

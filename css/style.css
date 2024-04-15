@@ -183,13 +183,14 @@ a {
 .th-btn {
     background-color: var(--th-color-1);
     color: #FFF;
-    font-family: var(--th-font-1);
+    font-family: var(--th-font-2);
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 1.12px;
-    padding: 4px 30px;
+    padding: 10px 30px;
+    border-radius: 50px;
     cursor: pointer;
     /* display: inline-block !important; */
 }
@@ -395,13 +396,18 @@ ul {
     transition: all .5s;
 }
 
-#btn-menu,
-#btn-close {
-    cursor: pointer;
-    max-width: 150px;
-    padding: 10px;
-}
 
+#btn-close {
+    max-width: 150px;
+    padding: 15px;
+}
+#btn-menu{
+    padding: 10px !important;
+    cursor: pointer;
+    background-color: #000;
+    border-radius: 10px;
+    color: #fff;
+}
 #btn-menu img,
 #btn-close img {
     cursor: pointer;
@@ -1122,8 +1128,8 @@ footer .bg-black a:hover {
     z-index: 1;
 }
 
-.testimonal h2 {
-    margin-bottom: 60px;
+.testimonal .h2 {
+justify-content: center;
 }
 
 .testimonal-box {

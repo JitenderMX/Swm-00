@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // Set the recipient email address
-    $to = "jitender.work.mediax@gmail.com";
+    $to = "hr@spanishwithmrityunjay.in";
     
     // Set the email subject
     $subject = "New Career Submission";
