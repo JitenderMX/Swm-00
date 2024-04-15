@@ -181,18 +181,35 @@ a {
 }
 
 .th-btn {
-    background-color: var(--th-color-1);
+    border-radius: 61px;
+    background: linear-gradient(90deg, #FB3528 32.8%, #FB3528 32.8%, #BB0113 100%);
+    opacity: .8;
     color: #FFF;
     font-family: var(--th-font-2);
-    font-size: 40px;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
     letter-spacing: 1.12px;
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
+    text-transform: uppercase;
     /* display: inline-block !important; */
+    transition: all .5s;
+}
+.th-btn:hover{
+    opacity: 1;
+}
+.th-btn.th-btn-outline{
+    background-color: transparent;
+    color: var(--th-color-1);
+    border: 1px solid var(--th-color-1);
+    transition: all .5s;
+}
+.th-btn.th-btn-outline:hover{
+    background-color: var(--th-color-1);
+    color: var(--th-color-4);
 }
 
 section {
@@ -535,6 +552,7 @@ ul {
 
 .us-media .h2 {
     color: var(--th-color-2);
+    justify-content: center;
 }
 
 .media-box {
@@ -631,6 +649,7 @@ ul {
 
 .gallery-photo .h2 {
     color: #fff;
+    justify-content: center;
 }
 
 .gallery-photo .text-red {
@@ -792,13 +811,16 @@ footer .bg-black a:hover {
 
 .our-course {
     background-color: var(--th-color-2);
-    padding: 200px 0 0 0;
+    padding: 150px 0 0 0;
     background-image: url(../image/our-course.png);
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
 }
+/* .our-course .h2{
+    margin-bottom: 50px;
+} */
 
 .course-container {
     width: 100%;
@@ -1345,7 +1367,9 @@ section.service {
     padding: 150px 10px 150px 10px;
     overflow-x: hidden;
 }
-
+#course-hero .h2{
+    justify-content: center;
+}
 .c-course {
     padding: 100px 0 0 0;
 }
@@ -1562,6 +1586,9 @@ padding: 4px 14px;
     padding: 100px 0;
     position: relative;
 }
+.contact-student .h2{
+    justify-content: center;
+}
 
 .contact-student .form-control,
 .contact-student .form-select,
@@ -1638,6 +1665,9 @@ padding: 4px 14px;
 /* 21.Locate Us Section Start ------------------------------ */
 .locate-us {
     background: #9AC2D4;
+}
+.locate-us .h2{
+    justify-content: center;
 }
 
 .locate-us a {
@@ -1734,6 +1764,7 @@ padding: 4px 14px;
 
 .our-stars .h2 {
     color: var(--th-color-4);
+    justify-content: center;
 }
 
 .os-btn-box {

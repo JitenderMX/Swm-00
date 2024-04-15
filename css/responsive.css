@@ -24,6 +24,9 @@
     #home-hero .h1 {
         font-size: 100px;
     }
+    #home-hero p{
+        margin-bottom: 20px;
+    }
 
     #blog-page #mainBlog .h3 {
         color: var(--th-color-3);
@@ -146,7 +149,7 @@
     #btn-menu,
     #btn-close {
         cursor: pointer;
-        max-width: 50px !important;
+        max-width: 100px !important;
     }
 
     #home-hero .h1 {
