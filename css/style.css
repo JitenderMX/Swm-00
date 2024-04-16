@@ -1679,6 +1679,27 @@ padding: 4px 14px;
     line-height: 130%;
     letter-spacing: 0.48px;
 }
+.loc{
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: all .5s;
+}
+.loc.active{
+    background-color: var(--th-color-4);
+}
+.loc:hover{
+    background-color: var(--th-color-4);
+}
+.loc .loc-red{
+    color: #FFF;
+    background-color: var(--th-color-1);
+    padding: 10px;
+font-family: var(--th-font-1);
+font-size: 40.157px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%;
+}
 
 /* ------------- Locate Us Section End ------------- */
 

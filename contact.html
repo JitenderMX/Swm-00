@@ -199,7 +199,8 @@
                   <div class="col-8">
                     <div class="row justify-content-center">
                       <div class="col-md-12 px-md-4 mt-4 mt-md-5">
-                      <input type="text" id="student-institute" name="student-institute" class="form-control" placeholder="Enter Institute">
+                        <input type="text" id="student-institute" name="student-institute" class="form-control"
+                          placeholder="Enter Institute">
 
                         <!-- <select id="student-institute" name="student-institute" class="form-select">
                           <option value="select-institute" selected>
@@ -771,15 +772,46 @@
             <div class="text-aut">LOCATE</div> <span class="text-red">US</span>
           </div>
           <div class="pt-4">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1752.335263395976!2d77.21004184841776!3d28.549621278270198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdd5f5e2acf5%3A0xf88728bb1b449ee!2sSpanish%20With%20Mrityunjay%20(Best%20Institute%20of%20Spanish%20Language%20in%20Delhi)!5e0!3m2!1sen!2sin!4v1704800289296!5m2!1sen!2sin"
-              width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="loc-box" data-loc="loc-delhi">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1752.335263395976!2d77.21004184841776!3d28.549621278270198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdd5f5e2acf5%3A0xf88728bb1b449ee!2sSpanish%20With%20Mrityunjay%20(Best%20Institute%20of%20Spanish%20Language%20in%20Delhi)!5e0!3m2!1sen!2sin!4v1704800289296!5m2!1sen!2sin"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="loc-box d-none" data-loc="loc-mumbai">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4660.6373903799695!2d72.86279644165113!3d19.060913819928633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9e9d5ffdedf%3A0xc43ed98e0801fc0f!2sSpanish%20With%20Mrityunjay%20(Best%20Institute%20of%20Spanish%20Language%20in%20Mumbai)!5e0!3m2!1sen!2sin!4v1713252892753!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="loc-box d-none" data-loc="loc-pune">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.482709318032!2d73.7905!3d18.597345999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9a63712da25%3A0x9c0ffd66b1d84726!2sSpanish%20With%20Mrityunjay%20(Best%20Institute%20of%20Spanish%20Language%20in%20Pune)!5e0!3m2!1sen!2sin!4v1713253141968!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </div>
-        <div class="col-md-8 mt-2">
-          <a href="https://maps.app.goo.gl/DndhFBMsRPCrhG7aA"> <i class="fas fa-map-marker-alt"></i> 416, First Floor,
-            near Dada Jungi Lane, Shahpur Jat, Siri Fort, New Delhi, Delhi 110049</a>
+        <div class="col-md-10 mt-2">
+          <div class="loc d-flex align-items-center gap-3 active" id="loc-delhi">
+            <div class="loc-red">
+              Delhi
+            </div>
+            <div class="">
+              <a> 416, First Floor,
+                near Dada Jungi Lane, Shahpur Jat, Siri Fort, New Delhi, Delhi 110049</a>
+            </div>
+          </div>
+          <div class="loc d-flex align-items-center gap-3" id="loc-mumbai">
+            <div class="loc-red">
+              Mumbai
+            </div>
+            <div class="">
+              <a>C, Parinee Crescenzo, 10th Floor, 30, G Block Rd, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051</a>
+            </div>
+          </div>
+          <div class="loc d-flex align-items-center gap-3" id="loc-pune">
+            <div class="loc-red">
+              Pune
+            </div>
+            <div class="">
+              <a>3rd & 4th Floor, G.K.Mall, Near, Kokane Chowk, above Pantaloons, Dwarkadheesh Gardens, Pimple Saudagar, Pune, Pimpri-Chinchwad, Maharashtra 411027</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1000,6 +1032,13 @@
 
 
   <script>
+    $(".loc").click(function(){
+      $(".loc").removeClass("active")
+      $(this).addClass("active")
+      let idVal = $(this).attr("id");
+      $(`.loc-box`).addClass("d-none");
+      $(`.loc-box[data-loc="${idVal}"]`).removeClass("d-none");
+    })
     // Contact Student
     $('.form-slider').slick({
       infinite: false,
@@ -1127,159 +1166,159 @@
 
     });
   </script>
-    <script>
-      $("#sf-slider").slick({
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        swipe: false,
-      });
-      $('input[name="have-query"]').change(function () {
-        if ($(this).val() === "yes") {
-          $("#sf-slider").slick("slickNext");
-        } else {
-          $(".contact-student-query").addClass("d-none");
-          $("#sf-slider").slick("slickNext");
-        }
-      });
-      $("#query-check").click(() => {
-        // Validate each field
-  
-        // Full Name validation
-        if ($('input[name="query-name"]').val() === "") {
-          alert("Please Enter Full Name");
-          return false;
-        }
-  
-        // Date of Birth validation
-        else if ($('input[name="query-number"]').val() === "") {
-          alert("Please Enter Valid Phone Number");
-          return false;
-        }
-  
-        // Profession validation
-        else if ($('input[name="query-email"]').val() === "") {
-          alert("Please Enter Vaild Email");
-          return false;
-        } else if ($('[name="query-city"]').val() === "") {
-          alert("Please Enter Your City");
-          return false;
-        }
-  
-        // Address validation
-        else if ($('input[name="query-message"]').val() === "") {
-          alert("Please Enter Your Query");
-          return false;
-        }
-      });
-      $("#step-1-check-s").click(() => {
-        // Validate each field
-  
-        // Full Name validation
-        if ($('input[name="student-name"]').val() === "") {
-          alert("Please Enter Full Name");
-          return false;
-        }
-  
-        // City validation
-        else if ($('input[name="student-city"]').val() === "") {
-          alert("Please Enter a City");
-          return false;
-        }
-  
-        // Date of Birth validation
-        else if ($('input[name="student-dob"]').val() === "") {
-          alert("Please Enter Date of Birth");
-          return false;
-        }
-  
-        // Profession validation
-        else if ($('input[name="student-profession"]').val() === "") {
-          alert("Please Enter Profession");
-          return false;
-        }
-  
-        // Address validation
-        else if ($('input[name="student-address"]').val() === "") {
-          alert("Please Enter Address");
-          return false;
-        }
-  
-        // // If all fields are valid, submit the form
-        // if (isValid) {
-        //     alert("Form submitted successfully!");
-        //     // Uncomment the following line to submit the form
-        //     // $("#myForm").submit();
-        // }
+  <script>
+    $("#sf-slider").slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      swipe: false,
+    });
+    $('input[name="have-query"]').change(function () {
+      if ($(this).val() === "yes") {
         $("#sf-slider").slick("slickNext");
-      });
-      $('input[name="second-q"]').change(function () {
-        if ($(this).val() === "yes") {
-          $("#sf-slider").slick("slickNext");
-        } else {
-          $(".contact-student-3").addClass("d-none");
-          $("#sf-slider").slick("slickNext");
-        }
-      });
-      $('[name="fee-paid"]').change(function () {
+      } else {
+        $(".contact-student-query").addClass("d-none");
         $("#sf-slider").slick("slickNext");
-      });
-      $("#step-2-check-s").click(function () {
+      }
+    });
+    $("#query-check").click(() => {
+      // Validate each field
+
+      // Full Name validation
+      if ($('input[name="query-name"]').val() === "") {
+        alert("Please Enter Full Name");
+        return false;
+      }
+
+      // Date of Birth validation
+      else if ($('input[name="query-number"]').val() === "") {
+        alert("Please Enter Valid Phone Number");
+        return false;
+      }
+
+      // Profession validation
+      else if ($('input[name="query-email"]').val() === "") {
+        alert("Please Enter Vaild Email");
+        return false;
+      } else if ($('[name="query-city"]').val() === "") {
+        alert("Please Enter Your City");
+        return false;
+      }
+
+      // Address validation
+      else if ($('input[name="query-message"]').val() === "") {
+        alert("Please Enter Your Query");
+        return false;
+      }
+    });
+    $("#step-1-check-s").click(() => {
+      // Validate each field
+
+      // Full Name validation
+      if ($('input[name="student-name"]').val() === "") {
+        alert("Please Enter Full Name");
+        return false;
+      }
+
+      // City validation
+      else if ($('input[name="student-city"]').val() === "") {
+        alert("Please Enter a City");
+        return false;
+      }
+
+      // Date of Birth validation
+      else if ($('input[name="student-dob"]').val() === "") {
+        alert("Please Enter Date of Birth");
+        return false;
+      }
+
+      // Profession validation
+      else if ($('input[name="student-profession"]').val() === "") {
+        alert("Please Enter Profession");
+        return false;
+      }
+
+      // Address validation
+      else if ($('input[name="student-address"]').val() === "") {
+        alert("Please Enter Address");
+        return false;
+      }
+
+      // // If all fields are valid, submit the form
+      // if (isValid) {
+      //     alert("Form submitted successfully!");
+      //     // Uncomment the following line to submit the form
+      //     // $("#myForm").submit();
+      // }
+      $("#sf-slider").slick("slickNext");
+    });
+    $('input[name="second-q"]').change(function () {
+      if ($(this).val() === "yes") {
         $("#sf-slider").slick("slickNext");
-      });
-      $("#step-3-check-s").click(() => {
-        if ($("#student-institute").val() === "") {
-          alert("Please Enter Your Institute Name");
-          return false;
-        } else if ($("#student-level").val() === "select-level") {
-          alert("Please Select a Level");
-          return false;
-        }
+      } else {
+        $(".contact-student-3").addClass("d-none");
         $("#sf-slider").slick("slickNext");
-      });
-      $("#step-enrollment-check-s").click(() => {
-        if (
-          $("#student-enrollment-level").val() === "select-enrollment-level"
-        ) {
-          alert("Please Select a Enrollment Level");
-          return false;
-        }
-        $("#sf-slider").slick("slickNext");
-      });
-      $("#aadhar-student-upload-check").click(function () {
-        var fileInput = $("#aadhar-student-upload");
-  
-        // Check if a file is selected
-        if (fileInput.get(0).files.length === 0) {
-          alert("No file uploaded!");
-          return false;
-        }
-        $("#sf-slider").slick("slickNext");
-      });
-      $("#step-4-check-s").click(() => {
-        if ($('input[name="student-number"]').val() === "") {
-          alert("Please Enter Phone Number");
-          return false;
-        } else if ($('input[name="student-email"]').val() === "") {
-          alert("Please Enter Your Correct Email");
-          return false;
-        } else if ($('input[name="student-education"]').val() === "") {
-          alert("Please Enter Education");
-          return false;
-        } else if ($('input[name="student-query"]').val() === "") {
-          alert("Please Enter Query");
-          return false;
-        }
-        $("#sf-slider").slick("slickNext");
-      });
-      $("#where-you-hear-student-check").click(() => {
-        if ($('[name="where-you-hear-student"]').val() === "") {
-          alert("Please Enter Where You Heard About Us");
-          return false;
-        }
-      });
-    </script>
+      }
+    });
+    $('[name="fee-paid"]').change(function () {
+      $("#sf-slider").slick("slickNext");
+    });
+    $("#step-2-check-s").click(function () {
+      $("#sf-slider").slick("slickNext");
+    });
+    $("#step-3-check-s").click(() => {
+      if ($("#student-institute").val() === "") {
+        alert("Please Enter Your Institute Name");
+        return false;
+      } else if ($("#student-level").val() === "select-level") {
+        alert("Please Select a Level");
+        return false;
+      }
+      $("#sf-slider").slick("slickNext");
+    });
+    $("#step-enrollment-check-s").click(() => {
+      if (
+        $("#student-enrollment-level").val() === "select-enrollment-level"
+      ) {
+        alert("Please Select a Enrollment Level");
+        return false;
+      }
+      $("#sf-slider").slick("slickNext");
+    });
+    $("#aadhar-student-upload-check").click(function () {
+      var fileInput = $("#aadhar-student-upload");
+
+      // Check if a file is selected
+      if (fileInput.get(0).files.length === 0) {
+        alert("No file uploaded!");
+        return false;
+      }
+      $("#sf-slider").slick("slickNext");
+    });
+    $("#step-4-check-s").click(() => {
+      if ($('input[name="student-number"]').val() === "") {
+        alert("Please Enter Phone Number");
+        return false;
+      } else if ($('input[name="student-email"]').val() === "") {
+        alert("Please Enter Your Correct Email");
+        return false;
+      } else if ($('input[name="student-education"]').val() === "") {
+        alert("Please Enter Education");
+        return false;
+      } else if ($('input[name="student-query"]').val() === "") {
+        alert("Please Enter Query");
+        return false;
+      }
+      $("#sf-slider").slick("slickNext");
+    });
+    $("#where-you-hear-student-check").click(() => {
+      if ($('[name="where-you-hear-student"]').val() === "") {
+        alert("Please Enter Where You Heard About Us");
+        return false;
+      }
+    });
+  </script>
 
   <script>
     function initializeAnimations() {
