@@ -68,7 +68,35 @@
                     </div>
                 </div>
                 <div class="col-12 mt-4">
-                    <div class="rh-img">
+                    <div class="d-none d-md-block">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-1.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-2.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-3.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-4.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-5.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-6.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-7.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-8.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-9.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-10.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-11.png" alt=""
+                                    class="w-100"></div>
+                            <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-12.png" alt=""
+                                    class="w-100"></div>
+                        </div>
+                    </div>
+                    <div class="rh-img d-block d-md-none">
                         <div class="row">
                             <div class="col-lg-2 col-md-3 py-2"><img src="image/resourse-logo/logo-1.png" alt=""
                                     class="w-100"></div>
@@ -435,17 +463,25 @@
             infinite: true,
             autoplay: true,
             autoplaySpeed: 2000,
+        })
+        $(".rh-img .row").slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            centerMode: true,
         });
         function initializeAnimations() {
             var windowWidth = $(window).width();
             if (windowWidth <= 768) {
-                $("#us-media-slider").slick({
-                    dots: true,
-                    arrows: false,
-                    infinite: true,
-                    autoplay: false,
-                    autoplaySpeed: 2000,
-                });
+                // $("#us-media-slider").slick({
+                //     dots: true,
+                //     arrows: false,
+                //     infinite: true,
+                //     autoplay: false,
+                //     autoplaySpeed: 2000,
+                // });
             } else {
 
             }

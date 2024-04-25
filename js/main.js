@@ -1,40 +1,15 @@
 // Loading Common Element Using External File
 $("#header").load("header.html");
 $("#footer").load("footer.html");
+$("#enroll-now").load("enroll-now.html");
 
 $(window).on("load", function () {
     var windowWidth = $(window).width();
 
     if (windowWidth <= 768) {
-        $(".rh-img .row").slick({
-            dots: false,
-            arrows: true,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 1500,
-            centerMode: true,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-        });
+       
     } else {
-        $(".rh-img .row").slick("unslick");
+        // $(".rh-img .row").slick("unslick");
     }
 });
 
